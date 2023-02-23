@@ -1,0 +1,11 @@
+.reportLink {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 2px 6px;
+  font-size: 0.9rem;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}

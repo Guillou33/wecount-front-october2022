@@ -1,0 +1,26 @@
+@import "../../../resources/mixins";
+
+.userFilter {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  .selectLabel {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    i {
+      color: $color-primary-5;
+      margin-right: 3px;
+      margin-bottom: 2px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.multiSelect {
+  flex-grow: 1;
+  width: 0;
+  margin-left: 5px;
+}

@@ -1,0 +1,142 @@
+@import "../../resources/mixins";
+
+.baseSelect {
+  position: relative;
+  height: 40px;
+  font-size: 15px;
+  width: 100%;
+
+  .mainField {
+    padding: 8px 15px;
+    border: 1px solid $color-primary-2;
+    border-radius: 4px 4px 0 0;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    cursor: pointer;
+
+    position: relative;
+    // z-index: 10;
+
+    .values {
+      width: 100%;
+      padding-right: 12px;
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+
+      border: none;
+      outline: none;
+
+      font-size: 15px;
+      font-weight: 300;
+
+      color: $color-primary-4;
+    }
+
+    .searchInput {
+      font-weight: 400;
+      color: $color-primary-4;
+      font-size: 15px;
+      font-weight: 300;
+
+      &::placeholder {
+        color: $color-primary-2;
+      }
+    }
+    .searchIcon {
+      color: $color-primary-3;
+    }
+
+    .placeholderText {
+      color: $color-primary-2;
+    }
+
+    .dropdownIcon {
+      margin-left: auto;
+      font-size: small;
+      color: $color-primary-3;
+    }
+  }
+  .options {
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    box-sizing: content-box;
+    margin: 0 -25px -25px -25px;
+    padding: 0 25px 25px 25px;
+    border-radius: 0 0 4px 4px;
+    min-width: 100%;
+  }
+
+  .optionsWrapper {
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid $color-primary-2;
+    box-shadow: 0 5px 20px -5px rgba(33, 33, 33, 0.3);
+    border-radius: 0 0 4px 4px;
+    min-width: 100%;
+    max-height: 450px;
+
+    .option {
+      cursor: pointer;
+      border-bottom: 1px solid $color-primary-2;
+      padding: 8px 15px;
+
+      min-width: 100%;
+      width: max-content;
+      // width: auto;
+
+      mark {
+        padding: 0.2em 0;
+        color: inherit;
+        background-color: $color-primary-2;
+        border-radius: 4px;
+      }
+
+      &.selected {
+        color: white;
+        background-color: $color-primary-4;
+        i, p {
+          color: white !important;
+        }
+
+        mark {
+          background-color: $color-primary-3;
+          color: inherit;
+        }
+      }
+
+      &.disabled {
+        color: darkgray;
+        cursor: not-allowed;
+      }
+
+      &:last-child {
+        border: none;
+      }
+
+      &:hover:not(.selected):not(.disabled) {
+        background-color: $color-primary-1;
+      }
+    }
+  }
+
+  &.folded {
+    .mainField {
+      border-radius: 4px;
+      z-index: 0;
+    }
+    .optionsWrapper {
+      box-shadow: none;
+    }
+    .options {
+      z-index: 5;
+    }
+  }
+}

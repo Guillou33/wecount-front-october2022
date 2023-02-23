@@ -1,0 +1,367 @@
+@import "../../../../../resources/mixins";
+
+$entryMainInfoGap: 28px;
+$first-col-margin: 180px;
+
+.editEntry {
+  .entryMainInfo {
+    .mainInfoRow {
+      display: flex;
+      & > *:first-child {
+        margin-right: 14px;
+      }
+      & > *:last-child {
+        margin-left: 14px;
+      }
+    }
+  }
+  .label {
+    margin-bottom: 5px;
+    color: $color-dark-3;
+    font-weight: 500;
+  }
+
+  .sitePoduct {
+    flex: 1 1 50%;
+  }
+
+  .topContainer {
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-primary-1;
+
+    .helpContainer {
+      background-color: $color-primary-1;
+      border-radius: 500px;
+      padding: 6px 10px;
+      font-weight: 300;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .helpIcon {
+      color: $color-primary-3;
+      font-size: 1.1rem;
+    }
+
+    .helpText {
+      margin: 0 10px;
+    }
+
+    .helpLink {
+      color: $color-primary-3;
+      text-decoration: underline;
+    }
+
+    .separator {
+      width: 1px;
+      background-color: $color-primary-1;
+      align-self: stretch;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      &.left {
+        margin-left: 15px;
+        margin-right: 8px;
+      }
+
+      &.right {
+        margin: 0 15px;
+      }
+    }
+  }
+
+  .formContainerWrapper {
+    .computationModeSelectorContainer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: $color-primary-3;
+      font-weight: 300;
+      font-size: 15px;
+      flex-shrink: 0;
+      .title {
+        color: #313131;
+        text-align: right;
+      }
+      cursor: pointer;
+      p {
+        margin: 0;
+      }
+      &.disabled {
+        cursor: not-allowed;
+      }
+    }
+
+
+    .formContainer {
+      padding: 20px 40px 5px 40px;
+
+      display: grid;
+      grid-template-areas:
+        "ef ef ef ef ef ef infos"
+        "field1 field1 field2 field2 uncertainty uncertainty infos"
+        "comments comments comments sources sources sources infos";
+      grid-template-columns: repeat(6, minmax(0, 1fr)) 25%;
+      gap: 25px;
+      align-items: flex-start;
+
+      &.directTco2Container {
+        grid-template-areas:
+          "directTco2 directTco2 directTco2 uncertainty infos"
+          "helpText helpText helpText helpText infos"
+          "comments comments sources sources infos";
+        grid-template-columns: repeat(4, minmax(0, 1fr)) 25%;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 0;
+      }
+      &.emissionFactorContainer {
+        grid-template-areas:
+          "inputEf inputEf unitNumber unitNumber uncertainty uncertainty infos"
+          "helpText helpText helpText helpText helpText helpText infos"
+          "comments comments comments sources sources sources infos";
+        grid-template-columns: repeat(6, minmax(0, 1fr)) 25%;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 0;
+      }
+    }
+    .uncertainty {
+      grid-area: uncertainty;
+    }
+    .selectModeContainer {
+      flex: 0 0 calc(100% - 25px);
+      margin: 0 12.5px 25px 12.5px;
+      .selectMode {
+        width: 100%;
+      }
+    }
+    .computationMethodHelp {
+      grid-area: helpText;
+      margin-bottom: 10px;
+      font-style: italic;
+      color: $color-primary-3;
+      align-self: center;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+  .entryEmissionForm {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: -12.5px;
+    margin-right: 12.5px;
+
+    & > *:not(.selectModeContainer) {
+      flex: 1 1 calc(33% - 25px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 12.5px;
+      margin-right: 12.5px;
+    }
+
+    & > *:last-child {
+      flex: 0 1 calc(33% - 25px);
+    }
+  }
+  .infoContainer {
+    grid-area: infos;
+    background-color: $color-primary-1;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 25px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &.smallHeight {
+      align-self: space-between;
+      max-height: 60%;
+    }
+  }
+  .efSourceWrapper {
+    align-self: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .info {
+    display: flex;
+    align-items: flex-start;
+
+    .infoIcon {
+      width: 18px;
+      align-self: center;
+    }
+
+    .labelAndValue {
+      margin-left: 10px;
+
+      .infoLabel {
+        margin-bottom: 4px;
+        font-weight: 300;
+        color: #313131;
+        font-size: 0.75rem;
+        line-height: 1;
+      }
+      .infoValue {
+        margin: 0;
+        font-weight: 300;
+        color: $color-primary-5;
+        font-size: 1.1rem;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  .historyAndExclude{
+    padding: 10px 0;
+    margin: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    // border-top: 1px solid $color-primary-1;
+    
+  }
+  .historyContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    width: auto;
+    .seeHistoryLink {
+      text-decoration: underline;
+      color: $color-primary-3;
+      cursor: pointer;
+    }
+    .noHistoryWrapper {
+      margin-top: 15px;
+      .noHistoryText {
+        font-style: italic;
+        color: $color-primary-2;
+        margin-left: 20px;
+      }
+    }
+    
+    .historyTableContainer {
+      width: auto;
+      padding-top: 20px;
+      position: relative;
+      .tableWrapper {
+        margin-left: $first-col-margin;
+        overflow-x: scroll;
+        .historyTable {
+          width: auto;
+          th.historyLegendCell {
+            background-color: darken($color-primary-1, 5%);
+            border-top: 1px solid $color-primary-1;
+          }
+          td.historyLegendCell {
+            background-color: darken($color-primary-1, 5%);
+            border-top: 1px solid $color-primary-1;
+            border-right: 1px solid $color-primary-1;
+          }
+          .historyLegendCell {
+            position: absolute;
+            width: $first-col-margin;
+            left: 0;
+            top: auto;
+            border-top-width: 1px;
+            /*only relevant for first row*/
+            margin-top: -1px;
+            /*compensate for top border*/
+            
+          }
+          .historyCell {
+            max-width: 250px;
+            .historyCellDiv {
+              p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0;
+              }
+            }
+
+            .tag {
+              display: inline-block;
+              border-radius: 5000px;
+              border: 1px solid $color-primary-2;
+              font-size: 0.8rem;
+              padding: 0 10px;
+              margin-right: 7px;
+            }
+
+            .tagIcon {
+              color: $color-primary-4;
+              transform: scaleX(-1);
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .closeButtonContainer {
+    padding: 40px;
+    border-top: 1px solid $color-primary-1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .lastSavedDate {
+      font-size: 0.8rem;
+      font-weight: 300;
+      margin-right: 15px;
+    }
+
+    .noErrorIcon {
+      color: darkgreen;
+      margin-right: 5px;
+    }
+
+    .submitEntryButton {
+      margin-right: 15px;
+    }
+  }
+
+  .sourceAndComments {
+    display: flex;
+    margin: -12.5px;
+    & > * {
+      flex: 1 1 auto;
+      margin: 12.5px;
+    }
+  }
+
+  textarea {
+    min-height: 40px;
+    margin-bottom: 0 !important;
+  }
+}
+
+.excludeFromTrajectory{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  .chkExclude{
+    cursor: pointer;
+  }
+  .labelExclude{
+    margin-left: 8px;
+    margin-bottom: -2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+}

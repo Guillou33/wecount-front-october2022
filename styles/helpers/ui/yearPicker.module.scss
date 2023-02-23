@@ -1,0 +1,33 @@
+@import "../../resources/mixins/";
+.currentYear {
+  font-weight: 400;
+}
+.decadeChooser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 25px;
+  white-space: nowrap;
+  background-color: $color-primary-4;
+  color: white;
+  border-bottom: 1px solid white;
+  grid-column: 1 / 4;
+
+  .decadeChanger {
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    &:hover {
+      transform: scale(1.2);
+      background-color: rgba(white, 0.15);
+    }
+  }
+
+  .decadeDisplayer {
+    padding: 0 15px;
+    font-weight: 400;
+  }
+}

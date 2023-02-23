@@ -1,0 +1,37 @@
+@import '../resources/mixins';
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  
+  .main {
+    @media #{$small-down} {
+      width: 100%;
+    }
+    @media #{$small-up} {
+      width: 60%;
+      min-width: 500px;
+    }
+    .noItemText {
+      color: $color-primary-3;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    padding-bottom: 100px;
+    .seeArchivesLinkContainer {
+      display: flex;
+      justify-content: flex-end;
+      .seeArchivesLink {
+        cursor: pointer;
+        color: $color-primary-4;
+        // text-decoration: underline;
+        font-weight: 500;
+      }
+    }
+    .archivedListContainer {
+      padding-top: 30px;
+    }
+  }
+}

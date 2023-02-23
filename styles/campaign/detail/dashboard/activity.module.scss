@@ -1,0 +1,42 @@
+@import '../../../resources/mixins';
+
+.activity {
+  cursor: pointer;
+  position: relative;
+  border: 1px solid $color-primary-2;
+  border-radius: $base-radius;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  color: $color-primary-4;
+  .leftPart {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .activityNameContainer {
+      display: flex;
+      align-items: center;
+      .activityName {
+        margin-bottom: 0;
+      }
+      .iconModify {
+        margin-left: 6px;
+        font-size: 12px;
+      }
+    }
+    .bottomInfo {
+      display: flex;
+      align-items: center;
+      .counterBadge {
+        margin-left: 4px;
+        margin-top: -2px;
+      }
+    }
+    
+  }
+  transition: border-color #{$base-transition}, color #{$base-transition};
+  &:hover {
+    color: $color-primary-5;
+    border-color: darken($color-primary-2, 15%);
+  }
+}

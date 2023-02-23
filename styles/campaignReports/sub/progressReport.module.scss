@@ -1,0 +1,48 @@
+@import "../../resources/mixins/";
+
+.progressReport {
+  display: grid;
+  grid-template-columns: 1fr 55px 55px 55px;
+  gap: 25px;
+  align-items: center;
+
+  .progressBar {
+    grid-column: 1 / -1;
+  }
+
+  .userInfo {
+    background-color: $color-primary-1;
+    border-radius: $base-radius;
+    padding: 15px;
+    text-align: left;
+
+    .userName {
+      color: $color-primary-5;
+    }
+
+    .userMail {
+      font-weight: 300;
+    }
+  }
+
+  .badge {
+    border-radius: $base-radius;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.terminated {
+      background-color: $color-status-terminated;
+    }
+
+    &.inProgress {
+      background-color: $color-status-in-progress;
+    }
+
+    &.toValidate {
+      background-color: $color-status-to-validate;
+    }
+  }
+}

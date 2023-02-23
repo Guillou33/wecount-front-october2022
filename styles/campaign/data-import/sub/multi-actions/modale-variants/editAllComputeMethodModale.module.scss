@@ -1,0 +1,19 @@
+@import "../../../../../resources/mixins/";
+
+.spinnerContainer {
+  padding: 8px 16px;
+}
+
+.spinner {
+  width: 25px;
+  height: 25px;
+}
+
+.efLabelContainer {
+  display: flex;
+  align-items: center;
+
+  .infoIcon {
+    color: $color-primary-3;
+  }
+}

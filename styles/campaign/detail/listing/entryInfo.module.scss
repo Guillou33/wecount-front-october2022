@@ -1,0 +1,30 @@
+@import "../../../resources/mixins";
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  .infoIcon {
+    width: 18px;
+    align-self: center;
+  }
+  .labelAndValue {
+    margin-left: 10px;
+
+    .infoLabel {
+      margin-bottom: 4px;
+      font-weight: 300;
+      color: #313131;
+      font-size: 0.75rem;
+      line-height: 1;
+    }
+    .infoValue {
+      margin: 0;
+      font-weight: 300;
+      color: $color-primary-5;
+      font-size: 1.1rem;
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}

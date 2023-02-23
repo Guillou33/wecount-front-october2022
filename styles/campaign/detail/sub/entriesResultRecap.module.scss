@@ -1,0 +1,13 @@
+@import "../../../resources/mixins/";
+
+.entriesResultRecap {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  justify-content: flex-end;
+  color: $color-primary-5;
+
+  .result {
+    font-size: 1.2rem;
+  }
+}

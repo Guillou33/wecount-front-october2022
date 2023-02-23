@@ -1,0 +1,186 @@
+@import '../resources/mixins';
+.header {
+
+.campaignInfoWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .campaignInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .campaignInfoInnerLeft {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+
+      .pageStatusBar{
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        font-weight: 300;
+        color: $color-primary-3;
+        font-size: 0.9rem;
+
+        .linkStatusBar{
+          margin: 0 5px;
+          cursor: pointer;
+
+          &:hover{
+            text-decoration: none;
+          }
+          &:focus{
+            color: $color-primary-3;
+
+          }
+        }
+        .spanStatusBar{
+          text-decoration: none;
+        } 
+      }
+
+      .campaignTitleInnerLeft{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: row;
+        width: auto;
+      }
+      
+    }
+    .campaignInfoInnerRight{
+      display: flex;
+      margin-top: 100px;
+      align-items: center;
+
+      .campaignInfoResultBadge{ 
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+
+        .clipboardLogo{
+          margin-top: 25px;
+          color: $color-primary-5;
+          border: solid 1px $color-primary-5;
+          border-radius: 4px;
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+    .campaignTitle {
+      margin: 10px 0;
+      width: "auto";
+      color: $color-primary-5;
+      font-size: 28px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.17;
+      letter-spacing: 0.58px;
+    }
+    .pencilCampaignName {
+      margin-top: 25px;
+      margin-left: 10px;
+      cursor: pointer;
+      color: $color-primary-2;
+    }
+    .campaignDescriptionEditable {
+      color: $color-primary-5;
+      margin-bottom: 20px;
+      line-height: 20px;
+    }
+    .campaignDescriptionText {
+      max-width: 75%;
+      max-height: 40px;
+      border: none;
+      resize: none;
+      color: #666666;
+      overflow: hidden;
+
+      // &.focused {
+      //   border: none;
+      // }
+      // &::after
+      // {
+      //   content: "";
+      // }
+    }
+
+    .pencilCampaignDescription {
+      margin-top: 2px;
+      margin-left: 10px;
+      cursor: pointer;
+      color: $color-primary-2;
+    }
+  }
+
+  .campaignResults {
+    max-height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.34px;
+  }
+
+  .hasHiddenEmissionsBadge {
+    margin-top: 15px;
+    margin-right: 15px;
+    background-color: $color-orange;
+    color: white;
+    border-radius: $base-radius;
+    padding: 11px 15px;
+    font-size: 1.2rem;
+    border: 1px solid $color-primary-1;
+  }
+
+  .activitiesProgression {
+    margin-right: 35px;
+  }
+
+  .campaignTabs {
+    border: none;
+    margin-bottom: 0;
+  }
+
+  .buttonContainer {
+    display: flex;
+  }
+
+  .importLink {
+    padding: 5px 12px;
+    margin-right: 12px;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .yearSelectorsContainer {
+    display: flex;
+    font-weight: 300;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+
+    @include yearPickerGrid;
+  }
+}
+.tabsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.tabsProjectionView{
+  margin-top: 10px;
+  padding: 0px 5.5%;
+  border-bottom: solid 1px $color-primary-2;
+}

@@ -1,0 +1,68 @@
+@import "../../resources/mixins";
+
+.perimeterCard {
+  background-color: white;
+  border-radius: $base-radius;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 144px;
+
+  @include lightShadow();
+  
+  .left{
+    .statusList {
+      margin-top: 5px;
+      font-size: 0.9rem;
+      font-weight: 300;
+      .status{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;   
+        .statusTitle{
+          display: flex;
+          flex-direction: row;       
+        }
+        .seeCampaigns{
+          margin-bottom: 0;
+          cursor: pointer;
+          color: $color-primary-2;
+          text-decoration: underline;
+          margin-left: 5px;
+        }
+      }
+      .campaignsDescription{
+        display: flex;
+        flex-direction: row;
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .button {
+    background: transparent;
+    display: block;
+    border: none;
+    outline: none;
+  }
+
+  .archiveButton {
+    color: $color-dark-1;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+}
+.campaignToolTipInside{
+  display: flex;
+  flex-direction: row;
+}

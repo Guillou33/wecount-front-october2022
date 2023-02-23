@@ -1,0 +1,73 @@
+@import "../../resources/mixins/";
+
+.fileInput {
+  --current-color: #{$color-primary-2};
+
+  min-width: 150px;
+
+  &:hover {
+    --current-color: #{$color-primary-3};
+  }
+
+  &.draggedOver {
+    --current-color: #{$color-primary-4};
+  }
+
+  .triggerFileChooser {
+    border: 1px solid var(--current-color);
+    border-radius: $base-radius;
+    transition: border 0.2s ease;
+
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    color: var(--current-color);
+    font-size: 0.95rem;
+
+    transition: color 0.2s ease;
+  }
+
+  .fileName {
+    font-weight: 300;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &:not(.hasPlaceholder) {
+      color: $color-primary-4;
+    }
+  }
+
+  .htmlInput {
+    display: none;
+  }
+
+  .uploadIcon {
+    width: 55px;
+    height: 55px;
+    margin-left: 15px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--current-color);
+    border-radius: $base-radius;
+    font-size: 1.2rem;
+
+    transition: border 0.2s ease;
+  }
+}
+
+.extensionMessage {
+  text-align: left;
+
+  .title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}

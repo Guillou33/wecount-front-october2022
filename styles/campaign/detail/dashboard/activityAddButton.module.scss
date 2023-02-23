@@ -1,0 +1,28 @@
+@import '../../../resources/mixins';
+
+.container {
+  padding-bottom: 10px;
+  .main {
+    cursor: pointer;
+    border: 1px dashed $color-primary-2;
+    border-radius: $base-radius;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-primary-3;
+    height: 55px;
+    .activityName {
+      margin-bottom: 0;
+    }
+    .plusSign {
+      margin-left: 8px;
+    }
+    transition: border-color #{$base-transition}, color #{$base-transition}, transform #{$base-transition};
+    &:hover {
+      color: $color-primary-4;
+      transform: scale(1.01);
+      border-color: $color-primary-3;
+    }
+  }
+}

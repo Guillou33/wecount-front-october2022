@@ -1,0 +1,50 @@
+@import "../../../resources/mixins/";
+
+.currentYear {
+  font-weight: 400;
+}
+
+.decadeChooser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 25px;
+  white-space: nowrap;
+  background-color: $color-primary-4;
+  color: white;
+  border-bottom: 1px solid white;
+  grid-column: 1 / 4;
+  border-radius: 4px 4px 0 0;
+
+  .decadeChanger {
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    &:hover {
+      transform: scale(1.2);
+      background-color: rgba(white, 0.15);
+    }
+  }
+
+  .decadeDisplayer {
+    padding: 0 15px;
+    font-weight: 400;
+  }
+}
+
+.optionContainer {
+  padding-top: 0;
+  border-radius: $base-radius $base-radius 0 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr repeat(4, auto);
+}
+
+.option {
+  text-align: center;
+
+}

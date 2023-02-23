@@ -1,0 +1,45 @@
+@import "../resources/mixins";
+
+
+.tco2resultBadge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  .target {
+    background-color: transparent;
+    color: $color-primary-2;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    
+    i {
+      font-size: 12px;
+      margin: 3px;
+    }
+    .targetText {
+      font-size: 12px;
+      white-space: nowrap;
+    }
+  }
+  .tco2 {
+    padding: 10px 0;
+    background-color: transparent;
+    color: $color-primary-5;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    // border: 1px solid $color-primary-2;
+    margin: 0;
+  }
+  .additionalTco2{
+    color: $color-primary-3;
+    font-size: 15px;
+
+  }
+}

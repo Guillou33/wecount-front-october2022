@@ -1,0 +1,9 @@
+@import "../../../resources/_mixins";
+
+.eyeViewerLinkContainer {
+  margin-top: 3px;
+  .eyeViewerLink {
+    color: $color-primary-4;
+    cursor: pointer;
+  }
+}

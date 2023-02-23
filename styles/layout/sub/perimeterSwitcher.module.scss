@@ -1,0 +1,22 @@
+.perimeterSwitcher {
+  width: 280px;
+
+  .selectionContainer {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  .optionContainer {
+    box-shadow: none;
+  }
+
+  .perimeterManagementLink {
+    padding: 10px;
+  }
+}
+
+.spinner {
+  margin-left: 3px;
+}

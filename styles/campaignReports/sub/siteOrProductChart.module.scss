@@ -1,0 +1,11 @@
+.siteProductChart {
+  .chartTypeTabs {
+    margin-bottom: 15px;
+
+    & > * {
+      height: 40px;
+      min-width: 100px;
+      padding: 0;
+    }
+  }
+}

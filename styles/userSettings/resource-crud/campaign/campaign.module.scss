@@ -1,0 +1,60 @@
+@import "../../../resources/mixins/";
+
+.buttonCreateContainer{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.deleteText {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.buttonDeleteContainer{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.iconAction {
+  color: $color-primary-3;
+  cursor: pointer;
+  &.iconArchive {
+    margin-left: 8px;
+  }
+  &.iconDuplicate {
+    margin-left: 8px;
+  }
+  &.iconUpdate{
+    margin-left: 8px;
+    margin-bottom: 4px;
+  }
+}
+
+.changeStatusContainer {
+  cursor: pointer;
+  margin-bottom: 10px;
+  .labelChangeStatus {
+    display: inline;
+  }
+}
+
+.errorMessage {
+  margin-top: 25px;
+  color: $color-red;
+}
+
+.yearErrorModal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .yearErrorModalText {
+    margin-top: 25px;
+    color: $color-red;
+  }
+  .yearErrorModalBtn {
+    text-align: center;
+    margin-top: 15px;
+  }
+}

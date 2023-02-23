@@ -1,0 +1,62 @@
+@import '../resources/mixins';
+
+.mobileMenu {
+  display: none;
+}
+.burgerMenuIcon {
+  display: none;
+}
+
+@media #{$small-down} {
+  .main.openedMobileMenu{
+    padding-top: 85.5px
+  }
+
+  .profilePicContainer {
+    display: none;
+  }
+  .leftMenu {
+    display: none;
+  }
+  .rightContent {
+    padding-left: 0;
+  }
+
+  .burgerMenuIcon {
+    z-index: 13;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    align-self: flex-start;
+  }
+
+  .mobileMenu {
+    z-index: 12;
+    display: block;
+    position: fixed;
+    padding: 100px 40px;
+    width: 90vw;
+    height: 100vh;
+    @include lightShadow();
+    background-color: $color-primary-5;
+    transform-origin: 0% 0%;
+    transform: translate(-110%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    &.open {
+      transform: none;
+    }
+    .menuItems {
+
+      .linkName {
+        color: $color-primary-2;
+        margin-bottom: 25px;
+        font-size: 18px;
+        &.active {
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../resources/mixins/";
+
+.searchInput {
+
+  
+  .searchInputContainer {
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    &:focus-within {
+      border-color: $color-primary-4;
+    }
+
+    .input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 8px 15px;
+      background-color: transparent;
+      color: $color-primary-4;
+
+      &::placeholder {
+        color: $color-primary-3;
+      }
+
+      &:focus ~ .searchIcon {
+        color: $color-primary-4;
+      }
+    }
+
+    .searchIcon {
+      margin-right: 12px;
+      color: $color-primary-3;
+    }
+  }
+}

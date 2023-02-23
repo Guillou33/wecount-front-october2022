@@ -1,0 +1,22 @@
+@import "../../../../../resources/mixins/";
+
+.row {
+  display: contents;
+
+  &.hasError {
+    td {
+      border-bottom: 1px solid $color-red;
+    }
+  }
+
+  .errorIcon {
+    color: $color-red;
+  }
+
+  .checkbox {
+    display: block;
+    height: 18px;
+    transform: translateY(2px);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../resources/mixins";
+
+.main {
+  position: fixed;
+  z-index: 13;
+  top: 0;
+  left: 60px;
+  width: calc(100vw - 60px);
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+
+  .content {
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    margin: auto;
+    background-color: white;
+    cursor: initial;
+    scroll-behavior: smooth;
+    
+  }
+}

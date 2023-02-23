@@ -1,0 +1,1 @@
+export const defaultEndYear = 2030;

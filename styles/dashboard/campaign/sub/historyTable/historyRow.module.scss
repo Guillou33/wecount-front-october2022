@@ -1,0 +1,36 @@
+@import "../../../../resources/mixins/";
+
+.historyRow {
+  border: none;
+
+  td {
+    border-top: 1px solid $color-primary-1;
+  }
+
+  td mark {
+    padding: 0;
+    color: $color-primary-5;
+  }
+
+  .currentCampaign {
+    background-color: #007bff0f;
+  }
+
+  .compareToCampaign {
+    background-color: #3370900a;
+  }
+
+  .stickyColumn {
+    position: sticky;
+    top: -500px;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+  }
+
+  .shadowed {
+    @include unidirectionalRightShadow() {
+      top: -1px;
+    }
+  }
+}

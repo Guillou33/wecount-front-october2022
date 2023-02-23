@@ -1,0 +1,11 @@
+@import "../../../../../resources/mixins/";
+
+.buttonUpdateContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.modalLabel {
+  font-weight: 500;
+  color: $color-primary-5;
+}

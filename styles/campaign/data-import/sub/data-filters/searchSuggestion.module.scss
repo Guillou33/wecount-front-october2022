@@ -1,0 +1,34 @@
+@import "../../../../resources/mixins/";
+
+.searchSuggestionFixedHeight {
+  .suggestionContainer {
+    height: 250px !important;
+  }
+}
+
+.searchSuggestionFluidHeight {
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.title {
+  padding: 3px 15px 8px 15px;
+  border-bottom: 1px solid;
+  min-width: 250px;
+}
+
+.suggestion {
+  padding: 8px 20px;
+  font-weight: 300;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-primary-1;
+  }
+}
+
+.noResults {
+  padding: 8px 20px;
+  font-style: italic;
+  font-weight: 300;
+}

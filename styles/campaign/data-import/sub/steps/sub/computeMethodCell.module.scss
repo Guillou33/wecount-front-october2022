@@ -1,0 +1,12 @@
+@import "../../../../../resources/mixins/";
+
+.computeMethodCell {
+  .spinnerContainer {
+    padding: 8px 16px;
+  }
+
+  .spinner {
+    width: 25px;
+    height: 25px;
+  }
+}

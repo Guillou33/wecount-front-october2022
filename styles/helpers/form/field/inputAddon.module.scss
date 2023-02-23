@@ -1,0 +1,45 @@
+@import "../../../resources/mixins";
+
+.inputAddon {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 40px;
+  border-bottom: solid 1px $color-primary-2;
+  position: relative;
+
+  & > div {
+    width: 100%;
+  }
+
+  input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    color: $color-primary-4;
+
+    &::placeholder {
+      color: $color-primary-2;
+    }
+  }
+
+  &.focused {
+    border-color: $color-primary-4;
+    outline: none;
+  }
+
+  &.empty:not(.focused) {
+    color: $color-primary-2;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background: #e9ecef80;
+
+    input {
+      background-color: transparent;
+      color: $color-primary-2;
+    }
+  }
+}

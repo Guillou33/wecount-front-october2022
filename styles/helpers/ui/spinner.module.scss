@@ -1,0 +1,19 @@
+@import "../../resources/mixins/";
+
+.spinnerContainer {
+  display: inline-flex;
+  align-items: center;
+  color: $color-dark-2;
+
+  &.vertical {
+    flex-direction: column;
+
+    .spinner {
+      margin-bottom: 8px;
+    }
+  }
+
+  &:not(.vertical) .spinner {
+    margin-right: 12px;
+  }
+}

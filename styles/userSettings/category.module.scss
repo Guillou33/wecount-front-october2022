@@ -1,0 +1,172 @@
+@import "../resources/mixins";
+
+.category {
+  &:first-child .categoryHeader {
+    margin-top: 0;
+  }
+  @include lightShadow();
+
+  margin-top: 20px;
+
+  .categoryHeader {
+    border-radius: $base-radius;
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 20px 20px 20px 15px;
+    height: 80px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    .dragIcon {
+      margin-right: 10px;
+      display: flex;
+      color: $color-primary-4;
+    }
+
+    .pictoContainer {
+      position: relative;
+      .picto {
+        width: 28px;
+        padding: 5px;
+        border-radius: $base-radius;
+        transition: background-color 0.3s ease;
+      }
+    }
+
+    .categoryName {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      margin-left: 15px;
+      font-weight: 500;
+      color: $color-primary-5;
+      font-size: 15px;
+
+      .commentButton {
+        margin: 0 10px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-radius: $base-radius;
+        padding: 3px 5px;
+        position: relative;
+
+        &:hover {
+          background-color: $color-primary-1;
+        }
+
+        &.hasDescription::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $color-notification;
+          position: absolute;
+          top: 2px;
+          right: 2px;
+        }
+      }
+    }
+
+    .foldIcon {
+      margin-left: 15px;
+    }
+
+    .activityModelVisibilityBadge {
+      padding: 2px;
+
+      .count {
+        margin-left: 10px;
+      }
+    }
+
+    .hiddenEntriesBadge {
+      margin-right: 15px;
+      background-color: $color-orange;
+      color: white;
+      padding: 2px;
+    }
+
+    .spinner {
+      width: 25px;
+      height: 25px;
+      margin-left: auto;
+      flex: 0 0 auto;
+    }
+  }
+
+  .activityModels {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+
+    .activityModel {
+      &:not(:first-child) {
+        border-top: solid 1px $color-primary-1;
+      }
+
+      cursor: pointer;
+      height: 53px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+
+      .activityModelName {
+        color: $color-primary-4;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .picto {
+    background-color: $color-primary-4;
+  }
+
+  &.open {
+    @include lightShadow();
+    .categoryHeader {
+      border-radius: $base-radius $base-radius 0 0;
+    }
+    &:not(.greyedOut) {
+      .categoryHeader {
+        background-color: darken($color-primary-1, 5%);
+        .picto {
+          background-color: $color-primary-4;
+        }
+      }
+    }
+  }
+
+  &.greyedOut {
+    .categoryHeader {
+      background-color: lighten($color-dark-1, 18%);
+
+      .activityModelVisibilityBadge {
+        background-color: $color-dark-1;
+      }
+
+      .dragIcon {
+        color: $color-dark-1;
+      }
+    }
+
+    .picto {
+      background-color: $color-dark-1;
+    }
+
+    .categoryName {
+      color: $color-dark-1;
+
+      .commentButton {
+        filter: grayscale(100%);
+      }
+    }
+  }
+}

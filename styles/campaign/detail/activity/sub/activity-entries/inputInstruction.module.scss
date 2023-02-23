@@ -1,0 +1,36 @@
+@import "../../../../../resources/mixins/";
+
+.inputInstructions {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+
+.instructionButton {
+  margin-right: 5px;
+  background-color: transparent;
+  border-radius: $base-radius;
+  padding: 3px 5px;
+  position: relative;
+
+  &.isEditable:hover {
+    background-color: $color-primary-1;
+  }
+
+  &:not(.isEditable) {
+    cursor: default;
+  }
+
+  &.hasInstruction::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $color-notification;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+}

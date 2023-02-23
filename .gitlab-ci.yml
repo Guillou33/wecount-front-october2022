@@ -1,0 +1,85 @@
+# Local :  gitlab-runner exec docker integration_test
+
+stages:
+  - Deploy staging
+  - Deploy prod
+
+
+#  to test with local gitlab-runner
+# variables:
+#   SSH_KNOWN_HOSTS: "useless_in_local"
+#   STAGING_DEPLOY_SSH_KEY: "path_to_key"
+
+cache:
+  paths:
+    - node_modules/
+    - .yarn
+
+# deploy_staging_thomas:
+#   stage: Deploy staging thomas
+#   image: node
+#   only:
+#     - dev-thomas
+#   script:
+#     - apt-get install -y bash
+#     - mkdir ~/.ssh
+#     - touch ~/.ssh/known_hosts
+#     - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+#     - chmod 644 ~/.ssh/known_hosts
+#     - chmod 600 $STAGING_DEPLOY_SSH_KEY
+#     - sed -i -e "s#__ssh_staging_key_path_to_replace__#$STAGING_DEPLOY_SSH_KEY#g" ecosystem.config.js
+#     - cat ecosystem.config.js
+#     - npm i -g pm2
+#     - pm2 deploy ecosystem.config.js staging_thomas --force
+
+# deploy_staging_mathieu:
+#   stage: Deploy staging mathieu
+#   image: node
+#   only:
+#     - dev-mathieu
+#   script:
+#     - apt-get install -y bash
+#     - mkdir ~/.ssh
+#     - touch ~/.ssh/known_hosts
+#     - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+#     - chmod 644 ~/.ssh/known_hosts
+#     - chmod 600 $STAGING_DEPLOY_SSH_KEY
+#     - sed -i -e "s#__ssh_staging_key_path_to_replace__#$STAGING_DEPLOY_SSH_KEY#g" ecosystem.config.js
+#     - cat ecosystem.config.js
+#     - npm i -g pm2
+#     - pm2 deploy ecosystem.config.js staging_mathieu --force
+
+deploy_staging:
+  stage: Deploy staging
+  image: node
+  only:
+    - dev
+  script:
+    - apt-get install -y bash
+    - mkdir ~/.ssh
+    - touch ~/.ssh/known_hosts
+    - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - chmod 600 $STAGING_DEPLOY_SSH_KEY
+    - sed -i -e "s#__ssh_staging_key_path_to_replace__#$STAGING_DEPLOY_SSH_KEY#g" ecosystem.config.js
+    - cat ecosystem.config.js
+    - npm i -g pm2
+    - pm2 deploy ecosystem.config.js staging --force
+
+deploy_prod:
+  stage: Deploy prod
+  image: node
+  only:
+    - master
+  script:
+    - apt-get install -y bash
+    - mkdir ~/.ssh
+    - touch ~/.ssh/known_hosts
+    - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - chmod 600 $PRODUCTION_DEPLOY_SSH_KEY
+    - sed -i -e "s#__ssh_production_key_path_to_replace__#$PRODUCTION_DEPLOY_SSH_KEY#g" ecosystem.config.js
+    - cat ecosystem.config.js
+    - npm i -g pm2
+    - pm2 deploy ecosystem.config.js production --force
+

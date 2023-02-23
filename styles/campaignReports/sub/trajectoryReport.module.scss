@@ -1,0 +1,29 @@
+@import "../../resources/mixins";
+
+.trajectoryReport {
+  font-size: 0.7rem;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 15px;
+  align-items: center;
+
+  .scopeLabel {
+    background-color: $color-primary-3;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: $base-radius;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 4px;
+  }
+
+  .badge {
+    font-size: inherit;
+    padding: 0;
+    min-width: auto;
+    margin-left: 0;
+    padding: 2px 4px;
+  }
+}

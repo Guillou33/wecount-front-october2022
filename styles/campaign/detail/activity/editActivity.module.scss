@@ -1,0 +1,159 @@
+@import "../../../resources/mixins";
+
+.activityPageWrapper {
+  background-color: $color-primary-1;
+  margin-top: 0;
+}
+
+.editActivity {
+  width: 100%;
+  min-height: 100vh;
+
+  .deleteIcon {
+    cursor: pointer;
+    color: $color-red;
+    font-size: 16px;
+    margin-right: 5px;
+    transition: transform #{$base-transition};
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .title {
+    margin-bottom: 30px;
+  }
+  .activityEntriesContainer,
+  .goFurtherContainer {
+    margin-top: 60px;
+
+    .goFurtherHelpContainer {
+      text-align: right;
+    }
+  }
+  .formBoxContainer {
+    border-radius: $base-radius;
+    width: 100%;
+    background-color: white;
+    .formBoxHeader {
+      cursor: pointer;
+      border-top-left-radius: $base-radius;
+      border-top-right-radius: $base-radius;
+      background-color: $color-primary-3;
+      color: white;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .rightPart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        .counterBadge {
+          margin-bottom: 6px;
+        }
+      }
+    }
+    &.closed {
+      .formBoxHeader {
+        border-bottom-left-radius: $base-radius;
+        border-bottom-right-radius: $base-radius;
+      }
+    }
+    .formBoxBody {
+      padding: 50px 70px 30px;
+      .helpTextLink {
+        font-style: italic;
+        color: $color-primary-3;
+        cursor: pointer;
+        margin-bottom: 40px;
+      }
+      .fieldGroupContainer {
+        display: flex;
+        margin-bottom: 0px;
+        align-items: center;
+        .labelContainer {
+          width: 200px;
+          p {
+            font-weight: 500;
+          }
+          .labelAlignEditable {
+            margin-bottom: 20px;
+          }
+        }
+        .actionPlanLabel {
+          align-self: flex-start;
+        }
+        .fieldContainer {
+          flex: 1;
+          &.statusFieldContainer {
+            margin-left: 16px;
+            .statusField {
+              width: 150px;
+            }
+          }
+          &.reductionTargetFieldContainer {
+            margin-left: 16px;
+            .reductionTargetField {
+              width: 90px;
+            }
+          }
+        }
+      }
+      .actionPlanContainer {
+        margin-top: 25px;
+      }
+    }
+  }
+  .reductionTargetCalculation {
+    margin-left: 16px;
+  }
+
+  .buttonSave {
+    margin-top: 30px;
+    float: right;
+  }
+}
+
+@media #{$small-down} {
+  .editActivity {
+    padding-bottom: 100px;
+    .editActivityContent {
+      margin: 0 50px;
+    }
+    .formBoxBody {
+      padding: 30px 20px 30px !important;
+      .fieldGroupContainer {
+        flex-direction: column;
+        align-items: flex-start !important;
+        .labelContainer {
+          width: 100% !important;
+          .labelAlignEditable {
+            margin-bottom: 10px !important;
+          }
+        }
+        .fieldContainer {
+          width: 100% !important;
+          &.statusFieldContainer {
+            margin-left: 16px;
+            margin-top: 20px;
+            .statusField {
+              width: calc(100% - 16px) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.helpContainer {
+  overflow: hidden;
+  .helpText {
+    font-style: italic;
+    color: $color-primary-3;
+    .helpTextHtml {
+      display: inline-block;
+    }
+  }
+}

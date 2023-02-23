@@ -1,0 +1,25 @@
+@import '../../resources/mixins';
+
+.main {
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  .closeButton {
+    cursor: pointer;
+    position: absolute;
+    right: 35px;
+    top: 25px;
+    font-size: 27px;
+    color: $color-primary-3;
+  }
+  .contentContainer {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+  }
+}

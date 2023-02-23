@@ -1,0 +1,28 @@
+@import "../../../../../resources/mixins/";
+
+.activitySelectOneContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: $color-primary-5;
+
+  .activitySelect {
+    margin-left: 8px;
+    width: 250px;
+  }
+
+  .optionGroup {
+    padding: 7px 12px;
+  }
+
+  .option {
+    padding-left: 24px;
+  }
+
+  .noData {
+    padding: 7px 12px;
+    font-style: italic;
+    font-weight: 300;
+  }
+}

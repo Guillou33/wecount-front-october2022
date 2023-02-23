@@ -1,0 +1,85 @@
+@import "../../../../../resources/mixins/";
+
+.headerRow {
+  vertical-align: top;
+
+  .namedColumn {
+    padding-bottom: 10px;
+  }
+}
+
+.buttonContainer {
+  width: 40px;
+
+  &.multiActionButtons {
+    width: 55px;
+    padding-right: 0;
+  }
+}
+
+.multiButtonsContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.tableHeaderButton {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  font-size: 1rem;
+
+  .badge {
+    --badge-size: 14px;
+    --badge-size-half: calc(var(--badge-size) / 2);
+    position: absolute;
+    border-radius: 50%;
+    background-color: $color-green;
+    width: var(--badge-size);
+    height: var(--badge-size);
+    font-size: 0.7rem;
+    top: calc(var(--badge-size-half) * -1 + 1px);
+    right: calc(var(--badge-size-half) * -1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+      transform: translateY(1px);
+    }
+  }
+}
+
+.emptyFilters {
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+.multiActionButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.allEntriesCheckbox {
+  cursor: pointer;
+}
+
+.actionButton {
+  font-size: 1rem;
+
+  i,
+  img {
+    margin-right: 7px;
+  }
+
+  img {
+    width: 16px;
+  }
+}
+
+.shadowed {
+  position: relative;
+  @include unidirectionalBottomShadow() {
+    bottom: -6px;
+  }
+}

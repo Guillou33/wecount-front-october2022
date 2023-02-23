@@ -1,0 +1,68 @@
+@import "../../../resources/mixins";
+
+$horizontalPadding: 15px;
+
+.tableWrapper {
+  overflow: auto;
+  max-height: calc(100vh - 230px);
+  border: 1px solid $color-primary-2;
+  background-color: white;
+}
+
+.reglementationTable {
+  overflow: visible;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  .stickyHeader {
+    position: sticky;
+    left: 0;
+    top: 0;
+    background-color: darken($color-primary-1, 5%);
+    z-index: 1;
+  }
+
+  .stickyColumn {
+    position: sticky;
+    left: 0;
+  }
+
+  .onTop {
+    z-index: 2;
+  }
+
+  td {
+    border-right: 1px solid $color-primary-2;
+    border-bottom: 1px solid $color-primary-2;
+    padding: 22px $horizontalPadding;
+    background-color: white;
+  }
+
+  td:first-child,
+  th:first-child {
+    padding-left: $horizontalPadding;
+  }
+
+  td:last-child,
+  th:last-child {
+    padding-right: $horizontalPadding;
+  }
+
+  .categoryTable {
+    td {
+      transition: background-color 0.25s;
+    }
+    tr:hover td:not([rowspan]) {
+      background-color: $color-primary-1;
+    }
+  }
+
+  .subTotalRow,
+  .categoryName {
+    background-color: darken($color-primary-1, 1%);
+  }
+}
+
+.downloadButton {
+  padding: 5px 12px;
+}

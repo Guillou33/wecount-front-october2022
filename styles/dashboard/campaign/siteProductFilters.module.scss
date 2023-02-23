@@ -1,0 +1,33 @@
+@import "../../resources/mixins";
+
+.selectLabel {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 15px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+  }
+}
+
+.multiSelectContainer {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  &:not(:last-child) {
+    margin-right: 22px;
+  }
+}
+
+.multiSelect {
+  margin-left: 5px;
+  width: 0;
+  flex-grow: 1;
+}
+.backToTop {
+  margin-left: 22px;
+  color: $color-dark-2;
+}

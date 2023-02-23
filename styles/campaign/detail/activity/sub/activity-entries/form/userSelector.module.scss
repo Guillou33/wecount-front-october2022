@@ -1,0 +1,46 @@
+@import "../../../../../../resources/mixins";
+
+.userSelector {
+  margin-right: 18px;
+
+  .selectedUserContainer {
+    padding: 0;
+
+    &.disabled {
+      background: transparent;
+      cursor: not-allowed;
+    }
+  }
+
+  .userOption {
+    display: flex;
+  }
+
+  .fullName {
+    margin-left: 8px;
+  }
+
+  .userPlaceholder {
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-primary-4;
+    border: 1px dashed $color-primary-4;
+    font-size: 0.65rem;
+    padding-left: 1px;
+    padding-bottom: 1px;
+
+    &.disabled {
+      color: $color-primary-2;
+      border-color: $color-primary-2;
+    }
+
+    &:not(.disabled):hover {
+      color: $color-primary-5;
+      border-color: $color-primary-5;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../../resources/_mixins';
+
+.main {
+  .allCampaigns {
+    overflow-y: visible;
+  }
+  .linkSeeArchivedContainer {
+    margin-bottom: 10px;
+    .linkSeeArchived {
+      color: $color-primary-3;
+      text-decoration: none;
+    }
+  }
+
+  .fixedHeaderWidth {
+    width: 160px;
+  }
+}

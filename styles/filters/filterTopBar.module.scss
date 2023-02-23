@@ -1,0 +1,92 @@
+@import "../resources/mixins";
+
+.filterTopBar {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-areas: "left center right";
+  grid-template-columns: auto 1fr auto;
+  overflow-x: overlay;
+
+  .disabledCheckbox {
+    cursor: default;
+  }
+}
+
+.left {
+  position: sticky;
+  left: 0;
+  display: flex;
+  align-items: center;
+  grid-area: left;
+  background-color: white;
+  padding-right: 15px;
+  padding-left: 20px;
+  height: 55%;
+  // border: solid 1px $color-primary-2;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.right {
+  position: sticky;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: right;
+  background-color: white;
+  height: 100%;
+  padding-left: 15px;
+  z-index: 1;
+
+  &.lonelyChild {
+    padding-right: 7px;
+  }
+}
+
+.separator {
+  width: 1px;
+  background-color: $color-primary-2;
+  height: 25px;
+  margin: 0 15px;
+}
+
+.filterButton {
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  border-color: $color-primary-2;
+  color: #7d88ca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activeFilterBadgeContainer {
+  grid-area: center;
+  flex: 1;
+  margin-right: -15px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  min-height: min-content;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  height: 100%;
+}
+.dropdownExcluded{
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.dropdownExcludedLabel{
+  margin-bottom: 0px;
+}
+.filterExcluded {
+  width: auto;
+  margin-right: 15px;
+  margin-top: 15px;
+}

@@ -1,0 +1,29 @@
+@import "../../../resources/mixins";
+
+.contentContainer {
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.modalLabel {
+  font-weight: 500;
+  color: $color-primary-5;
+}
+.nameInput{
+  padding: 8px;
+  border: 1px solid #c5c9e8;
+  border-radius: 4px;
+    width: 100%;
+}
+.buttonCreateContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+@media #{$small-down} {
+  .contentContainer {
+    margin-top: 40px;
+    padding-bottom: 50px;
+  }
+}

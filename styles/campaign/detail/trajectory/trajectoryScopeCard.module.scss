@@ -1,0 +1,79 @@
+@import "../../../resources/mixins";
+
+.scopeCard{
+  width: 45%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  .titleScopeContainer{
+    padding: 10px;
+    border-bottom: 1px solid $color-primary-2;
+    .titleScope{
+      font-size: 20px;
+    }
+  }
+  .scopeFieldsContainer{
+    margin-top: 10px;
+    .scopeField{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      min-height: 46px;
+      width: 100%;
+      .targetReductionByYear {
+        width: 100%;
+        margin-left: 15px;
+      }
+      p{
+        margin-bottom: 0;
+        font-size: 15px;
+        color: $color-primary-4;
+        font-weight: bold;
+      }
+      .scopeLabel{
+        min-width: 50%;
+      }
+    }
+    .scopeResult{
+      background-color: $color-primary-1;
+      p{
+        color: $color-primary-5;
+      }
+      
+      .scopeTco2BadgeContainer {
+        display: flex;
+        align-items: center;
+      
+        .tco2Badge {
+          margin-left: 15px;
+          font-size: 15px;
+          color: $color-primary-5;
+        }
+      }
+      
+    }
+  }
+}
+.reductionBadgeText{
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: center;
+}
+.reductionBadgeBase{
+  color: $color-primary-4;
+  font-weight: bold;
+  text-align: center;
+}
+.reductionBadgeDown{
+  color: $color-status-to-validate;
+  font-weight: bold;
+  text-align: center;
+}
+.reductionBadgeUp{
+  color: $color-orange;
+  font-weight: bold;
+  text-align: center;
+
+}

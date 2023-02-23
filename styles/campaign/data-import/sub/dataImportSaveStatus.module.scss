@@ -1,0 +1,49 @@
+@import "../../../resources/mixins/";
+
+.saveStatus {
+  max-width: 90vw;
+  flex-grow: 1;
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+}
+
+.icon {
+  font-size: 3.13rem;
+
+  &.success {
+    color: darkgreen;
+  }
+
+  &.error {
+    color: $color-red;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+
+  &.top {
+    margin-top: 10px;
+  }
+
+  &.bottom {
+    margin-bottom: 25px;
+  }
+}
+
+.button {
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}

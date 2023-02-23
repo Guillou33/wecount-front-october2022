@@ -1,0 +1,54 @@
+@import "../../../../../resources/mixins/";
+
+.numberOfData {
+  text-align: right;
+  margin-bottom: 0;
+  color: $color-primary-5;
+}
+
+.entryDataTable {
+  width: 90vw;
+  min-height: 50vh;
+  margin-bottom: 350px;
+
+  table {
+    border-collapse: separate;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  th {
+    background-color: white;
+    border-bottom: 1px solid $color-primary-5;
+  }
+
+  tbody td {
+    border-bottom: 1px solid $color-primary-1;
+  }
+
+  td,
+  th {
+    padding: 22px 10px;
+    font-size: 15px;
+  }
+
+  th {
+    font-weight: 400;
+    color: $color-primary-3;
+    // padding: 11px 10px 22px 10px;
+  }
+
+  td {
+    // padding: 22px 10px;
+    font-weight: 300;
+    color: $color-primary-5;
+  }
+
+  .tableSettingsButton {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: calc(100% + 15px);
+  }
+}

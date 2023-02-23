@@ -1,0 +1,254 @@
+@import './resources/mixins';
+@import './resources/buttons';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --scroll-bar-width: calc(100vw - 100%);
+  font-family: Roboto, sans-serif;
+  color: $color-dark-2;
+  margin-right: calc(var(--scroll-bar-width) * -1);
+  overflow-x: hidden;
+}
+
+textarea:disabled,
+input:disabled {
+  cursor: not-allowed;
+  background-color: #e9ecef80;
+}
+
+.color-1 {
+  color: $color-primary-5;
+}
+.color-2 {
+  color: $color-primary-4;
+}
+.color-3 {
+  color: $color-primary-3;
+}
+
+.title-1 {
+  font-size: 48px;
+  line-height: 66px;
+  font-weight: 700;
+}
+
+.title-2 {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+.title-3 {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.subhead {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+p, a {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+input, button, select, optgroup, textarea {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  color: $color-dark-2;
+  background-color: white;
+}
+
+@media #{$small-down} {
+  input, button, select, optgroup, textarea {
+    font-size: 16px;
+  }
+}
+
+.text-danger {
+  color: $color-red !important;
+}
+.text-success {
+  color: $color-green !important;
+}
+.text-muted {
+  color: $color-primary-2 !important;
+}
+
+.default-field {
+  height:min-content;
+  width: 100%;
+  margin-bottom: 20px;
+  .error-message {
+    margin-bottom: 6px;
+    color: $color-red;
+  }
+  .field {
+    width: 100%;
+    border-radius: 4px;
+    border: solid 1px $color-primary-2;
+    padding: 8px 15px;
+    color: $color-primary-4;
+    &::placeholder {
+      color: $color-primary-2;
+    }
+    &:focus {
+      border-color: $color-primary-4;
+      outline: none;
+    }
+    &.disabled {
+      background-color: $color-primary-1;
+      &::placeholder {
+        color: $color-primary-3;
+      }
+    }
+    &.error {
+      border-color: $color-red;
+      &::placeholder {
+        color: $color-red;
+      }
+    }
+  }
+}
+
+.editable-border-bottom {
+  padding: 0 0 10px;
+}
+.editable-border-bottom-field {
+  box-sizing: content-box;
+  min-width: 400px;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 7px;
+  border-bottom: solid 3px $color-primary-2;
+  &:focus, &:active {
+    // border: none;
+    outline: none;
+  }
+}
+
+.editable-border-bottom-placeholder {
+  color: $color-primary-3;
+  cursor: pointer;
+}
+
+.wecount-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: $base-radius;
+  background-color: white;
+  
+  thead {
+    background-color: darken($color-primary-1, 5%);
+  }
+  tr {
+    border-top: 1px solid $color-primary-1;
+  }
+  
+  td, th {
+    padding: 22px 10px;
+    font-size: 15px;
+  }
+  th.header-clickable {
+    cursor: pointer;
+    &.active {
+      color: $color-primary-5;
+    }
+  }
+  td:first-child, th:first-child {
+    padding-left: 30px;
+  }
+  td:last-child, th:last-child {
+    padding-right: 30px;
+  }
+  th {
+    font-weight: 400;
+    color: $color-primary-3;
+  }
+  td {
+    font-weight: 300;
+    color: $color-primary-5;
+  }
+}
+
+.tooltip {
+  white-space: pre-line;
+}
+.tooltip .tooltip-inner {
+  background-color: $color-primary-5;
+}
+.tooltip .arrow::before {
+  border-top-color: $color-primary-5 !important;
+}
+
+// Burger menu
+.burger-open {
+  position: fixed !important;
+  top: 0;
+}
+
+
+.badge {
+  border-radius: 2px;
+  padding: 0px 4px;
+  p {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+.page-header {
+  padding: 30px 30px 0 30px;
+  width: 100%;
+  max-width: $max-content-width;
+}
+
+.page-content-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  margin: auto;
+  border-top: 1px solid $color-primary-2;
+
+  .page-content {
+    margin: auto;
+    max-width: $max-content-width;
+    padding: 0 30px 60px 30px;
+    min-height: 100vh;
+  }
+}
+
+@media #{$small-down} {
+  .title-1 {
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 700;
+  }
+  
+  .title-2 {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+  
+  .title-3 {
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500;
+  }
+
+  .page-header {
+    padding-top: 0;
+  }
+}

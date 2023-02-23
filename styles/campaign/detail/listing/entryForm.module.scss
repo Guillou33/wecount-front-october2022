@@ -1,0 +1,238 @@
+@import "../../../resources/mixins";
+
+.mainEntryForm {
+  padding: 0 40px 20px 40px;
+  display: grid;
+  display: grid;
+  grid-template-areas:
+    "ef ef ef ef ef ef infos"
+    "field1 field1 field2 field2 uncertainty uncertainty infos"
+    "comments comments comments sources sources sources infos";
+  grid-template-columns: repeat(6, minmax(0, 1fr)) 25%;
+  gap: 25px;
+  align-items: flex-start;
+
+  &.directTco2Form {
+    grid-template-areas:
+      "directTco2 directTco2 directTco2 uncertainty infos"
+      "helpText helpText helpText helpText infos"
+      "comments comments sources sources infos";
+    grid-template-columns: repeat(4, minmax(0, 1fr)) 25%;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0;
+  }
+  &.emissionFactorForm {
+    grid-template-areas:
+      "inputEf inputEf unitNumber unitNumber uncertainty uncertainty infos"
+      "helpText helpText helpText helpText helpText helpText infos"
+      "comments comments comments sources sources sources infos";
+    grid-template-columns: repeat(6, minmax(0, 1fr)) 25%;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0;
+  }
+}
+.entryFields {
+  padding: 15px;
+  width: 70%;
+}
+
+.emissionFactor {
+  margin-left: auto;
+  text-align: right;
+  font-size: 12px;
+  color: $color-primary-2;
+  line-height: 1.1;
+  padding-top: 5px;
+  max-width: 25%;
+}
+.markContainer {
+  margin-left: 15px;
+  border: 1px solid $color-primary-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: $color-primary-4;
+  height: 37px;
+  width: 37px;
+}
+.result {
+  background-color: $color-primary-4;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  min-width: 48px;
+  text-align: center;
+  margin-left: 10px;
+  font-size: 18px;
+}
+.sitesProducts {
+  display: flex;
+  font-size: 16px;
+  font-weight: 100;
+  color: $color-dark-3;
+
+  img {
+    margin-right: 2px;
+    width: 13px;
+  }
+  .baseSelect {
+    height: max-content;
+    .mainField {
+      .statusField {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+  .mainField {
+    width: max-content;
+    border-color: white;
+    padding: 0;
+    padding-right: 5px;
+  }
+}
+
+.entryStatus {
+  margin-top: 8px;
+  // z-index:20;
+  .mainField {
+    border-color: white;
+    height: max-content;
+    padding-top: 5px;
+    padding-right: 9px;
+
+    .statusField {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .options {
+    .statusBadge {
+      i {
+        margin-bottom: 3px;
+      }
+    }
+  }
+  .statusBadge {
+    i {
+      font-size: 9px;
+    }
+  }
+}
+
+//   &:hover {
+//     .sitesProducts {
+//       .mainField {
+//         text-decoration: underline;
+//       }
+//     }
+
+//     .entryTitle::after {
+//       opacity: 1;
+//     }
+//   }
+
+.computationMethodHelp {
+  grid-area: helpText;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: $color-primary-3;
+  align-self: center;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.dataFieldContainer {
+  .fieldWithUnit {
+    display: flex;
+    align-items: center;
+    .unit {
+      margin: 0;
+      margin-left: 5px;
+      font-weight: 300;
+    }
+  }
+  .field {
+    height: 40px;
+    margin: 0;
+  }
+  .efLabelContainer {
+    display: flex;
+    align-items: center;
+    .infoIcon {
+      color: $color-primary-3;
+    }
+  }
+}
+
+.uncertainty {
+  width: 99.5%;
+}
+
+.dataFieldContainer2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.srcAndComm {
+  display: flex;
+  margin: -12.5px;
+  & > * {
+    flex: 1 1 auto;
+    margin: 12.5px;
+  }
+}
+.infoContainer {
+  grid-area: infos;
+  background-color: $color-primary-1;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 30px 0 20px 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.efSourceWrapper {
+  align-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.selectSiteAndProduct {
+  position: inherit;
+  .options {
+    width: 7.6%;
+  }
+}
+.selectStatus {
+  position: inherit;
+  .options {
+    width: 6%;
+  }
+}
+.picto {
+  margin-right: 5px;
+}
+
+.closeButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid $color-primary-1;
+  text-align: right;
+  padding: 25px 40px;
+
+  p {
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+}

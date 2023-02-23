@@ -1,0 +1,25 @@
+@import '../../../resources/mixins';
+
+%hoverField {
+  box-sizing: content-box;
+  padding: 10px 17px;
+  border-radius: $base-radius;
+  margin-bottom: 20px;
+  &:hover {
+    border: solid 1px $color-primary-2;
+    padding: 9px 16px;
+    cursor: text;
+  }
+}
+
+.textContainer {
+  // margin: 0;
+  color: $color-primary-5;
+  @extend %hoverField;
+}
+
+.placeholder {
+  // margin: 0;
+  color: $color-primary-3;
+  @extend %hoverField;
+}

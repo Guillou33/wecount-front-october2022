@@ -1,0 +1,69 @@
+@import "../../../resources/mixins";
+
+.selectionContainer {
+  padding: 8px;
+  border: 1px solid #c5c9e8;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $color-primary-3;
+  width: 100%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  font-weight: 300;
+  height: 100%;
+
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 2px 0 #c5c9e8;
+  }
+
+  &.opened {
+    border-color: $color-primary-3;
+  }
+
+  &.noIcon {
+    gap: 0;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background: #e9ecef80;
+  }
+}
+
+.selectedItems {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 22.5px;
+}
+
+.placeholder {
+  color: $color-primary-2;
+}
+
+.ghostContainer {
+  border: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+
+  &::placeholder {
+    color: $color-primary-2;
+  }
+}

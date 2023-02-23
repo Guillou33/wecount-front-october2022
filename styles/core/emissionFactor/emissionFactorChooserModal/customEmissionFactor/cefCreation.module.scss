@@ -1,0 +1,47 @@
+@import "../../../../resources/mixins";
+
+.main {
+  padding: 40px 16px;
+  .header {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $color-primary-5;
+    .titleCreation {
+      margin: 0;
+      text-align: center;
+      flex: 1;
+    }
+    .backArrowContainer {
+      cursor: pointer;
+    }
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .fieldsContainer {
+      flex: 1;
+      position: relative;
+      overflow-y: scroll;
+      width: 600px;
+      max-width: 100%;
+      .label {
+        font-weight: bold;
+        color: $color-primary-5;
+        margin-bottom: 5px;
+      }
+      .unitSelector {
+        div {
+          padding-left: 5px;
+        }
+      }
+      .buttonConfirmContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

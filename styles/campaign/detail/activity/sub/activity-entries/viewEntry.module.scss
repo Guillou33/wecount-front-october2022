@@ -1,0 +1,76 @@
+@import "../../../../../resources/mixins";
+
+$entryGap: 45px;
+$fieldGap: 20px;
+$pictoGap: 15px;
+
+.viewEntry {
+  display: flex;
+  align-items: flex-end;
+  padding: 25px 40px;
+  
+  .fieldView {
+    white-space: nowrap;
+    overflow: hidden;
+
+    & > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .fieldsContainer {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-areas: ". . uncertainty";
+    grid-template-columns: 1fr 1fr auto;
+    gap: 25px;
+  }
+  .fieldName {
+    color: $color-primary-3;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .fieldValue {
+    color: $color-dark-3;
+    font-weight: 300;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .uncertainty {
+    grid-area: uncertainty;
+  }
+
+  .infoContainer {
+    grid-area: infos;
+    display: flex;
+    margin-left: 25px;
+    cursor: pointer;
+  }
+
+  .picto {
+    position: relative;
+    margin: $pictoGap/2;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .picto.withBadge::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: $color-notification;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+  }
+}

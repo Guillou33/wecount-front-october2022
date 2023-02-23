@@ -1,0 +1,43 @@
+@import "../resources/mixins";
+
+.activeFilterBadge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $color-primary-2;
+  border-radius: 5000px;
+  padding: 0 10px;
+  color: $color-primary-4;
+  font-weight: 300;
+  margin-right: 15px;
+
+  .label {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+
+  .labelWrapper {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .removeButton {
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    color: $color-primary-2;
+    padding-right: 0;
+    transform: scale(0.9);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: $color-primary-4;
+    }
+  }
+}

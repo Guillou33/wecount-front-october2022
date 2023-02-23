@@ -1,0 +1,32 @@
+@import "../resources/mixins";
+
+.filterButton {
+  height: 33px;
+  width: 33px;
+  padding: 0;
+  border-color: $color-primary-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:hover {
+    border-color: $color-primary-3;
+  }
+}
+
+.numberBadge {
+  top:0;
+  right: 0;
+  position: absolute;
+  background-color: $color-primary-4;
+  color: white;
+  border-radius: 5000px;
+  height: 15px;
+  min-width: 15px;
+  font-size: 9px;
+  text-align: center;
+  padding: 1px;
+  padding-top: 1px;
+  transform: translate(50%, -50%);
+}

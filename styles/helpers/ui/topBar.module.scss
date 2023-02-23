@@ -1,0 +1,21 @@
+@import "../../resources/mixins";
+
+.topBar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  border-top: 1px solid $color-primary-2;
+  border-bottom: 1px solid $color-primary-2;
+  background-color: white;
+  z-index: 5;
+}
+
+.topBarContent {
+  height: 80px;
+  max-width: $max-content-width;
+  margin: auto;
+  padding: 0 30px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+}

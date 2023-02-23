@@ -1,0 +1,11 @@
+@import "../../../../../resources/mixins/";
+
+.icon {
+  &.isError {
+    color: $color-red;
+  }
+
+  &.isWarning {
+    color: $color-orange;
+  }
+}

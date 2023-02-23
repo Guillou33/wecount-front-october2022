@@ -1,0 +1,13 @@
+@import "../../../../resources/mixins";
+
+.totals {
+  align-self: flex-start;
+
+  .campaignOneTotal {
+    color: $color-primary-5;
+  }
+
+  .campaignTwoTotal {
+    color: #dc8030;
+  }
+}

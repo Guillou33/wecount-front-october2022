@@ -1,0 +1,236 @@
+@import "../../../resources/mixins";
+
+.mainModal {
+  display: flex;
+  flex-direction: row;
+  .divider {
+    width: 100%;
+    border-top: solid 1px $color-primary-1;
+  }
+  .title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-primary-5;
+  }
+  .computeMethodDivider {
+    margin-top: 20px;
+  }
+}
+
+.cefContent {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+  overflow-y: scroll;
+}
+
+.tagColumn {
+  height: 100vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  .header {
+    padding: 18px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-primary-1;
+    .closeButton {
+      height: auto;
+      border: none;
+      outline: none;
+      font-size: 1.2rem;
+      color: $color-primary-5;
+      display: flex;
+      align-items: center;
+    
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .tagsContainer {
+    flex: 1;
+    position: relative;
+    min-width: 0;
+    overflow-y: scroll;
+  }
+  .emptyTags {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    p {
+      color: $color-primary-3;
+    }
+  }
+}
+
+.mainColumn {
+  width: 980px;
+  @include shadowLeft();
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .section {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header {
+    padding: 18px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-primary-1;
+    .closeButton {
+      height: auto;
+      border: none;
+      outline: none;
+      font-size: 1.2rem;
+      color: $color-primary-5;
+      display: flex;
+      align-items: center;
+    
+      &:focus {
+        outline: none;
+      }
+    }
+    .helpContainer {
+      background-color: $color-primary-1;
+      border-radius: 500px;
+      padding: 6px 10px;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      color: $color-dark-3;
+      font-size: 15px;
+      overflow: hidden;
+      .helpIcon {
+        color: $color-primary-3;
+        font-size: 1.1rem;
+      }
+      .helpText {
+        margin: 0 10px;
+      }
+      .helpLink {
+        color: $color-primary-3;
+        cursor: pointer;
+        text-decoration: underline;
+        margin-left: 8px;
+      }
+      .questionMark {
+        color: $color-primary-3;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border: 2px solid $color-primary-3;
+        border-radius: 100%;
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+        font-size: 12px;
+      }
+    }
+  }
+  .efFiltersContainer {
+    margin-bottom: 20px;
+    .searchIcon {
+      color: $color-primary-5;
+    }
+    .errorEfField {
+      p {
+        color: $color-red;
+        margin: 4px 0 0;
+      }
+    }
+    .filtersContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .leftSideFilters {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .databaseFiltersContainer {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+    .tagFiltersContainer {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: row;
+      .filterButtonContainer {
+        width: 33px;
+      }
+      .activeTagsContainer {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .activeTag {
+          margin-right: 8px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  .efListSectionContainer {
+    flex: 1;
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    min-width: 0;
+    overflow-y: scroll;
+    .emptyEFListContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 60px;
+      p {
+        color: $color-primary-3;
+      }
+    }
+  }
+  .validateButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+  }
+}
+
+.efMainFilter {
+  cursor: pointer;
+  padding: 2px 5px;
+  border: 1px solid $color-primary-3;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 5px;
+  align-items: center;
+  .checkboxContainer {
+    margin-right: 5px;
+    display: flex;
+    .checkbox {
+      border-color: $color-primary-3;
+    }
+  }
+  .innerText {
+    display: inline-block;
+    margin: 0;
+    color: $color-primary-3;
+    user-select: none;
+    &.isChecked {
+      color: $color-primary-4;
+      font-weight: bold;
+    }
+  }
+}

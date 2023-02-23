@@ -1,0 +1,53 @@
+@import "../../../resources/mixins/";
+
+.header {
+  border-bottom: 1px solid $color-primary-2;
+}
+
+.headerContent {
+  max-width: 90vw;
+  margin: auto;
+  padding: 60px 30px 30px 30px;
+}
+
+.title {
+  color: $color-primary-5;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.campaignInfo {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 300;
+  height: 24px;
+}
+
+.campaignName {
+  color: $color-primary-5;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  color: $color-primary-2;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+
+  .infoIcon {
+    margin-right: 5px;
+    display: inline-block;
+    width: 14px;
+
+    &.nudgeUp {
+      margin-bottom: 1px;
+    }
+  }
+
+  .infoValue {
+    margin-left: 4px;
+  }
+}

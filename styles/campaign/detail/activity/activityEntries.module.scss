@@ -1,0 +1,560 @@
+@import "../../../resources/mixins";
+
+.middle {
+  margin: 0 18px;
+}
+
+.pseudoCell {
+  min-width: 125px;
+  height: 38px;
+}
+
+.displayInput {
+  color: $color-primary-5;
+  padding-right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.selection {
+  color: $color-primary-5;
+  display: flex;
+  font-size: 0.9rem;
+
+  .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .picto {
+    margin-right: 3px;
+  }
+}
+
+.searchContainerInput {
+  max-width: 110px;
+}
+
+.siteProductTextContainer {
+  color: $color-primary-5;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-right: 20px;
+  padding: 9px 0px;
+
+  .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .picto {
+    margin-right: 3px;
+  }
+}
+.titleList {
+  color: $color-primary-5;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.contentTitle {
+  height: 38px;
+  color: $color-primary-5;
+  font-weight: 500;
+  margin-top: 55px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.helpContainer {
+  padding-top: 20px;
+  display: flex;
+  color: $color-dark-3;
+  font-weight: 300;
+  font-size: 15px;
+  overflow: hidden;
+  .helpLink {
+    color: $color-primary-4;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 8px;
+  }
+  .questionMark {
+    color: $color-primary-3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid $color-primary-3;
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+}
+
+.addEntryButton {
+  margin-left: auto;
+}
+
+.helpButton {
+  display: flex;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.addNewEntryContainer {
+  cursor: pointer;
+  border: 1px dashed $color-primary-2;
+  border-radius: $base-radius;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-primary-3;
+  height: 55px;
+  .title {
+    margin-bottom: 0;
+  }
+  .plusSign {
+    margin-left: 8px;
+  }
+  transition: border-color #{$base-transition}, color #{$base-transition},
+    transform #{$base-transition};
+  &:hover {
+    color: $color-primary-4;
+    transform: scale(1.015);
+    border-color: $color-primary-3;
+  }
+}
+.ownerSelector {
+  &.baseSelect {
+    width: fit-content;
+  }
+  flex: 0 0 auto;
+  margin-left: auto;
+
+  &.folded .mainField {
+    border-color: white;
+  }
+}
+.topBarListing {
+  display: flex;
+  justify-content: space-between;
+  // justify-content: flex-end;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.chkActionTop {
+  margin-left: 10px;
+  margin-right: -10px;
+  font-size: 1.2rem;
+  color: $color-primary-2;
+  cursor: pointer;
+}
+
+.moreActionTop {
+  width: 28px;
+  font-size: 1.2rem;
+  color: $color-primary-2;
+  cursor: pointer;
+}
+
+.entryActionTop {
+  cursor: pointer;
+  color: $color-primary-3;
+
+  &:hover {
+    color: $color-red;
+  }
+}
+
+.entry {
+  border-radius: 5px;
+  margin-bottom: 40px;
+  background-color: white;
+  @include lightShadow();
+
+  // display: flex;
+  // flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+    // border-bottom: 1px solid $color-primary-1;
+    padding: 20px 20px 20px 10px;
+    position: relative;
+    cursor: pointer;
+    min-height: 108px;
+
+    @include lightShadow();
+
+    & > * {
+      flex-shrink: 0;
+    }
+
+    .chkAction {
+      width: 30px;
+      margin-left: 10px;
+      margin-right: -10px;
+      font-size: 1.2rem;
+      color: $color-primary-2;
+      cursor: pointer;
+    }
+
+    .moreAction {
+      width: 28px;
+      font-size: 1.2rem;
+      color: $color-primary-2;
+      cursor: pointer;
+    }
+    // .mainHeader{
+    //   display: flex;
+    //   align-items: center;
+
+    .entryStatus {
+      .mainField {
+        border-color: white;
+        height: max-content;
+        padding-top: 5px;
+        padding-right: 9px;
+
+        .statusField {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      .options {
+        .statusBadge {
+          i {
+            margin-bottom: 3px;
+          }
+        }
+      }
+      .statusBadge {
+        i {
+          font-size: 9px;
+        }
+      }
+    }
+
+    .actionEntry {
+      cursor: pointer;
+      color: $color-primary-3;
+
+      &:hover {
+        color: $color-red;
+      }
+
+      &.actionEntryDisabled {
+        color: $color-primary-2;
+        cursor: not-allowed;
+      }
+    }
+
+    .selectEntryButton {
+      color: $color-primary-2;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+      &.selected {
+        color: $color-primary-4;
+      }
+    }
+
+    .counterBadgeMobile {
+      display: none;
+    }
+
+    .mainInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 1 auto;
+      margin-right: 15px;
+
+      .entryOrigin {
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+
+      .entryTitle {
+        color: $color-primary-5;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+      }
+
+      .entryInstruction {
+        font-weight: 300;
+        font-size: 0.8rem;
+        color: $color-primary-5;
+      }
+      .entryTitleInput {
+        padding-bottom: 2px;
+        height: 20px;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+    .emissionFactor {
+      margin-left: auto;
+      text-align: right;
+      font-size: 12px;
+      color: $color-primary-2;
+      line-height: 1.1;
+      padding-top: 5px;
+      max-width: 25%;
+    }
+    .markContainer {
+      margin-left: 15px;
+      border: 1px solid $color-primary-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: $color-primary-4;
+      height: 37px;
+      width: 37px;
+    }
+    .result {
+      color: $color-primary-5;
+      padding: 3px 10px;
+      border-radius: 5px;
+      min-width: 150px;
+      text-align: center;
+      margin-left: 10px;
+      font-size: 18px;
+    }
+    .sitesProducts {
+      display: flex;
+      font-size: 16px;
+      font-weight: 100;
+      color: $color-dark-3;
+
+      img {
+        margin-right: 2px;
+        width: 13px;
+      }
+      .baseSelect {
+        height: max-content;
+      }
+      .mainField {
+        width: max-content;
+        border-color: white;
+        padding: 0;
+        padding-right: 5px;
+      }
+    }
+
+    &:hover {
+      .sitesProducts {
+        .mainField {
+          text-decoration: underline;
+        }
+      }
+
+      .entryTitle::after {
+        opacity: 1;
+      }
+    }
+    // }
+  }
+  .entryMainContent {
+    width: 100%;
+
+    &.opened {
+      @include lightShadow();
+    }
+
+    .textManualMain {
+      margin-bottom: 0;
+      margin-top: 5px;
+      font-size: 14px;
+      font-style: italic;
+      text-decoration: underline;
+      color: $color-primary-3;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .label {
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: $color-dark-3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      width: fit-content;
+    }
+
+    .comments {
+      grid-area: comments;
+    }
+    .sources {
+      grid-area: sources;
+    }
+    .titleContainer {
+      flex: 1 1 75%;
+    }
+
+    .emissionFactorField {
+      grid-area: ef;
+    }
+    .dataFieldContainer {
+      .fieldWithUnit {
+        display: flex;
+        align-items: center;
+        .unit {
+          margin: 0;
+          margin-left: 5px;
+          font-weight: 300;
+        }
+      }
+      .field {
+        height: 40px;
+        margin: 0;
+      }
+      .efFakeFieldContainer {
+        cursor: pointer;
+      }
+      .efPlaceholder {
+        margin: 0;
+        color: $color-primary-2;
+      }
+      .efFakeFieldContainer {
+        .disabledField {
+          background-color: lighten($color-dark-1, 30);
+          cursor: not-allowed;
+        }
+        .fakeField {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          &.disabled {
+            background-color: $color-dark-3;
+          }
+          .searchIconContainer {
+            i {
+              color: $color-primary-3;
+            }
+          }
+        }
+      }
+      .efLabelContainer {
+        display: flex;
+        align-items: center;
+        p {
+          margin: 0;
+        }
+        .infoIcon {
+          color: $color-primary-3;
+        }
+      }
+    }
+
+    .field1 {
+      grid-area: field1;
+    }
+
+    .field2 {
+      grid-area: field2;
+    }
+
+    .unitNumber {
+      grid-area: unitNumber;
+    }
+
+    .inputEf {
+      grid-area: inputEf;
+    }
+
+    .directTco2Input {
+      grid-area: directTco2;
+      .directTco2field {
+        margin-bottom: 5px;
+      }
+      .changeComputeMethodLink {
+        color: $color-primary-3;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media #{$small-down} {
+  .entry {
+    flex-direction: column !important;
+    .counterBadgeMobile {
+      display: block !important;
+      height: fit-content !important;
+      margin-top: 3px;
+    }
+    .dataForm {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      .dataFieldContainer {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+        &:not(:first-child) {
+          margin-top: 20px !important;
+        }
+      }
+      .counterBadgeDesktop {
+        display: none !important;
+      }
+    }
+
+    .secondLine {
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      .rightPart {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.valueComparison {
+  &.red {
+    color: $color-red;
+  }
+  &.green {
+    color: $color-green;
+  }
+  &.raw {
+    color: $color-primary-2;
+    font-style: italic;
+    .valueComparisonValue {
+      color: $color-primary-3;
+      font-style: normal;
+    }
+  }
+}

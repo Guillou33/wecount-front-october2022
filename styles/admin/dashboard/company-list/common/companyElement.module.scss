@@ -1,0 +1,44 @@
+@import '../../../../resources/mixins';
+
+.main {
+  border-width: 0 0 2px;
+  border-color: $color-primary-5;
+  border-style: solid;
+  margin-top: 12px;
+  .companyInfo {
+    display: flex;
+    justify-content: space-between;
+    .companyText {
+      cursor: pointer;
+      .chevronIcon {
+        margin-right: 8px;
+      }
+      .companyName {
+        color: $color-primary-5;
+        font-weight: bold;
+      }
+      .companyUserNb {
+        margin-left: 5px;
+        font-style: italic;
+        color: $color-primary-3;
+      }
+    }
+    .lockIcon {
+      cursor: pointer;
+    }
+
+    .readOnlyModeSwitcher {
+      align-self: flex-start;
+      margin-left: auto;
+      margin-right: 25px;
+    }
+  }
+  .userLi {
+    .impersonateIcon {
+      font-size: 1rem;
+    }
+    .impersonateButton {
+      padding: 5px 8px;
+    }
+  }
+}

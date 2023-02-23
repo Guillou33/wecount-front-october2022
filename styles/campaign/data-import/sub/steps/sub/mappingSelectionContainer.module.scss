@@ -1,0 +1,33 @@
+@import "../../../../../resources/mixins/";
+
+.mappingSelectionContainer {
+  .cellError {
+    color: $color-red;
+    border-color: $color-red;
+
+    &.opened {
+      border-color: $color-red;
+    }
+
+    .placeholder {
+      color: $color-red;
+    }
+  }
+
+  .cellWarning {
+    color: $color-orange;
+    border-color: $color-orange;
+
+    &.opened {
+      border-color: $color-orange;
+    }
+
+    .placeholder {
+      color: $color-orange;
+    }
+  }
+
+  .searchInput {
+    color: $color-primary-3;
+  }
+}

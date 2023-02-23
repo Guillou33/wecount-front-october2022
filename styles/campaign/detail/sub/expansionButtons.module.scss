@@ -1,0 +1,48 @@
+@import "../../../resources/mixins";
+
+.expansionButtons {
+  height: 33px;
+  border-radius: $base-radius;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px;
+  margin-right: 15px;
+  border-color: $color-primary-2;
+
+  &:hover {
+    border-color: $color-primary-3;
+  }
+
+  .expansionButton {
+    display: block;
+    border: none;
+    background-color: $color-primary-2;
+    border-radius: $base-radius;
+    color: white;
+    margin-right: 5px;
+    cursor: pointer;
+    width: 15px;
+    outline: 0;
+    transition: background-color #{$base-transition};
+    transform-origin: top;
+    &:hover, &.active {
+      background-color: $color-primary-4;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &.foldAll {
+      height: 10px;
+    }
+
+    &.expandToCategories {
+      height: 12px;
+    }
+    &.expandToActivityModels {
+      align-self: stretch;
+    }
+  }
+}

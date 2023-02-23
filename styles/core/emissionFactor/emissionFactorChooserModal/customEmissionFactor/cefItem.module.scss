@@ -1,0 +1,55 @@
+@import "../../../../resources/mixins";
+
+.main {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: white;
+  @include lightShadow();
+  p {
+    margin: 0;
+  }
+  .mainInfo {
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $color-primary-5;
+    .title {
+      flex: 1;
+    }
+    .cefValue, .cefUncertainty {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      width: 130px;
+      img {
+        width: 18px;
+      }
+      p {
+        font-size: 13px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .cefValue {
+      // margin-left: 20px;
+    }
+    .chooseButton {
+      cursor: pointer;
+      padding-left: 15px;
+      i {
+        color: $color-primary-4;
+      }
+    }
+  }
+  .comment {
+    padding: 10px 12px;
+    margin-top: 15px;
+    p {
+      font-style: italic;
+      color: $color-dark-1;
+    }
+  }
+}

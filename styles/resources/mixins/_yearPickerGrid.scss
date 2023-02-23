@@ -1,0 +1,47 @@
+@mixin yearPickerGrid {
+  .yearSelector {
+    width: auto;
+    min-width: 140px;
+
+    .mainField {
+      background-color: transparent;
+      padding-left: 0;
+      border: none;
+    }
+    .optionsWrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr repeat(3, auto);
+
+      .option:nth-child(3n) {
+        border-left: 1px solid $color-primary-2;
+        border-right: 1px solid $color-primary-2;
+      }
+      .option:last-child {
+        grid-column: 2;
+        border-left: 1px solid $color-primary-2;
+        border-right: 1px solid $color-primary-2;
+      }
+    }
+  }
+  .selectedYearField {
+    display: flex;
+    align-items: center;
+    color: $color-primary-2;
+    font-size: 15px;
+    margin-right: 20px;
+    .selectedYearIcon {
+      margin-right: 2px;
+      width: 12px;
+    }
+    .selectedYear {
+      margin-left: 2px;
+      color: $color-dark-1;
+      text-underline-offset: 1px;
+      &.clickable {
+        color: $color-primary-5;
+        text-decoration: underline;
+      }
+    }
+  }
+}

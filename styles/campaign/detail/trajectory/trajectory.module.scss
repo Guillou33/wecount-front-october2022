@@ -1,0 +1,289 @@
+@import "../../../resources/mixins";
+
+.tabContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabsContainer{
+  width: 100%;
+  border-bottom: solid 1px $color-primary-1;
+}
+
+.goToDashboard {
+  margin-right: 35px;
+  width: 39px;
+  height: 32px;
+  padding: 0;
+
+  i {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+}
+.main{
+  width: 88.5vw;
+  .definitionContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+}
+.topBar {
+  margin-top: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+
+  .scopeSelectionButton {
+    margin-right: 25px;
+    min-width: 90px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .campaignReferenceSelection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 53%;
+    .campaignReference{
+      color: $color-primary-4;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    .campaignTitle{
+      font-size: 15px;
+    }
+  }
+  .yearSelector {
+    font-weight: 300;
+
+    .selectedYearField {
+      display: flex;
+      align-items: center;
+      color: $color-primary-2;
+      font-size: 15px;
+      margin-right: 20px;
+      .selectedYearIcon {
+        margin-right: 2px;
+        width: 12px;
+      }
+      .selectedYear {
+        margin-left: 2px;
+        color: $color-dark-1;
+        text-underline-offset: 1px;
+        &.clickable {
+          color: $color-primary-5;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+}
+.topBarDefinition{
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+.topBarProjection{
+  justify-content: flex-end;
+}
+
+.targetReductionByYearContainer {
+  display: flex;
+  align-items: center;
+  padding-right: 35px;
+
+  label {
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+
+  .percentInput {
+    margin: 0;
+    margin-left: 15px;
+    width: 105px;
+  }
+
+  .targetReductionByYear {
+    width: 160px;
+    margin-left: 15px;
+  }
+}
+
+.trajectoryDescription {
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.reductionText {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: 10px;
+  div {
+    text-align: center;
+    p{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.categoryPlanContainer {
+  padding-top: 10px;
+}
+
+.estimatedTotal {
+  // margin-top: 25px;
+  margin-left: 20px;
+  background-color: $color-primary-1;
+  padding: 5px 20px;
+  border-radius: 20px;
+
+  & > :first-child {
+    flex: 1;
+    align-self: flex-start;
+  }
+
+  .trajectoryDescription {
+    margin-right: 15px;
+    width: auto;
+  }
+
+  .inputDescription {
+    flex: 1;
+  }
+}
+
+.helpContainer {
+  padding-top: 20px;
+  overflow: hidden;
+  position: relative;
+
+  .helpLoaderContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50px;
+    width: 100%;
+  }
+}
+
+.yearRangeError {
+  margin-left: auto;
+  margin-bottom: 0;
+  padding: 7px 12px;
+}
+.topBar2{
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-end;
+  border-bottom: solid 1px $color-primary-2;
+  margin-right: 35px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.estimationLabel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+  margin-top: 45px;
+  margin-left: 15px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: $color-primary-4;
+}
+
+.label {
+  color: $color-primary-5;
+}
+
+.introMessage {
+  margin-right: 35px;
+  background-color:$color-primary-1;
+  // border: solid 1px $color-primary-2;
+  color: $color-primary-5;
+  font-weight: 500;
+  .helpInfo {
+    background-color: transparent;
+    border: none;
+    color: $color-primary-4;
+    border: 2px solid $color-primary-5;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-right: 5px;
+    padding-right:1.5px;
+  }
+  .linkTrajectoryMessage{
+    color: $color-primary-5;
+    text-decoration: underline;
+  }
+}
+
+.scopeTco2BadgeContainer {
+  margin-left: auto;
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+
+  .tco2Badge {
+    margin-left: 15px;
+    p {
+      font-size: 20px;
+      padding: 5.5px 10px;
+    }
+  }
+}
+
+.reductionTableView{
+  @include lightShadow();
+  padding: 20px;
+  margin-left: -25px;
+  padding-right: 30px;
+  margin-bottom: 30px;
+
+}
+
+.macroView{
+  @include lightShadow();
+  padding: 20px;
+  margin-left: -25px;
+  padding-right: 30px;
+}
+.iconTargetYear {
+  margin-right: 3px;
+}
+.reductionTableView{
+  @include lightShadow();
+  padding: 20px;
+  margin-left: -25px;
+  padding-right: 30px;
+
+}
+
+.macroView{
+  @include lightShadow();
+  padding: 20px;
+  margin-left: -25px;
+  padding-right: 30px;
+}

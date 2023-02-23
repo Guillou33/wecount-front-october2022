@@ -1,0 +1,71 @@
+@import '../resources/mixins';
+
+.main {
+  padding-top: 150px;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .mainFormContainer {
+    background-color: $color-primary-1;
+    padding: 50px;
+    border-radius: $base-radius;
+    width: 400px;
+    .chkCgvuField{
+      display: flex; 
+      flex-direction: row; 
+      width: 100%;
+      .chkCgvu{
+        width: 10%;
+        input{
+          cursor: pointer;
+        }
+      }
+      .paragraphCgvu{
+        margin-left: 5px;
+        font-size: 12px;
+        text-align: justify;
+        width: 83%;
+        .openCgvu{
+          font-weight: bold; 
+          width: auto;
+          font-size: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+    .buttonSubmitContainer {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .successText {
+        display: none;
+        opacity: 0;
+        transition: opacity #{$base-transition};
+        &.isShown {
+          display: block;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &.bgBlue {
+    background-color: $color-primary-1;
+    .mainFormContainer {
+      background-color: white;
+    }
+  }
+}
+
+@media #{$small-down} {
+  .main {
+    padding-top: 100px !important;
+    .mainFormContainer {
+      background-color: $color-primary-1;
+      padding: 35px 20px;
+      width: 90% !important;
+    }
+  }
+}

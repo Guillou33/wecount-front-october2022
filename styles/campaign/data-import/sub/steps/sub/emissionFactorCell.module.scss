@@ -1,0 +1,12 @@
+@import "../../../../../resources/mixins/";
+
+.emissionFactorCell {
+  .efLabelContainer {
+    display: flex;
+    align-items: center;
+
+    .infoIcon {
+      color: $color-primary-3;
+    }
+  }
+}

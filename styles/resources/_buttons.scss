@@ -1,0 +1,161 @@
+%button-style {
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 8px 20px;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+%button-1-style {
+  @extend %button-style;
+  background-color: $color-primary-4;
+  color: white;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+%button-1-style-dynamic {
+  &:active {
+    background-color: $color-primary-3;
+  }
+  &:hover {
+    background-color: $color-primary-5;
+  }
+  &:disabled {
+    background-color: $color-primary-2;
+  }
+}
+
+%button-2-style {
+  @extend %button-style;
+  background-color: white;
+  border: 1px solid;
+  color: $color-primary-4;
+  border-color: $color-primary-4;
+  &:focus {
+    outline: none;
+  }
+}
+
+%button-2-style-dynamic {
+  &:active {
+    color: $color-primary-3;
+    border-color: $color-primary-3;
+  }
+  &:hover {
+    color: $color-primary-5;
+    border-color: $color-primary-5;
+  }
+  &:disabled {
+    color: $color-primary-2;
+    border-color: $color-primary-2;
+  }
+}
+
+%button-3-style {
+  @extend %button-style;
+  background-color: $color-primary-1;
+  border: none;
+  color: $color-primary-3;
+  &:focus {
+    outline: none;
+  }
+}
+
+%button-3-style-dynamic {
+  &:active {
+    color: $color-primary-3;
+    background-color: darken($color-primary-1, 2);
+  }
+  &:hover {
+    color: $color-primary-4;
+    background-color: darken($color-primary-1, 2);
+  }
+  &:disabled {
+    color: $color-dark-1;
+    background-color: lightgray;
+  }
+}
+
+%button-danger-style {
+  @extend %button-style;
+  background-color: $color-red;
+  color: white;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+%button-danger-style-dynamic {
+  &:active {
+    background-color: lighten($color-red, 10%);
+  }
+  &:hover {
+    background-color: darken($color-red, 10%);
+  }
+  &:disabled {
+    background-color: lighten($color-red, 30%);
+  }
+}
+
+.button-1 {
+  @extend %button-1-style;
+  @extend %button-1-style-dynamic;
+}
+
+.button-2 {
+  @extend %button-2-style;
+  @extend %button-2-style-dynamic;
+}
+
+.button-3 {
+  @extend %button-3-style;
+  @extend %button-3-style-dynamic;
+}
+
+.button-danger {
+  @extend %button-danger-style;
+  @extend %button-danger-style-dynamic;
+}
+
+.base-spinner {
+  font-size: 15px;
+}
+
+.button-group {
+  display: flex;
+  button {
+    border-radius: 0 !important;
+  }
+
+  button:first-child {
+    border-top-left-radius: $base-radius !important;
+    border-bottom-left-radius: $base-radius !important;
+  }
+
+  button:last-child {
+    border-top-right-radius: $base-radius !important;
+    border-bottom-right-radius: $base-radius !important;
+  }
+
+  button.active {
+    @extend %button-1-style;
+    cursor: default;
+  }
+
+  button:not(.active) {
+    @extend %button-2-style;
+    @extend %button-2-style-dynamic
+  }
+}
+
+.button-bare {
+  border: none;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+}

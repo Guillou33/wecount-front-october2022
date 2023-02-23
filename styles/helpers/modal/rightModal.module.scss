@@ -1,0 +1,24 @@
+@import "../../resources/mixins";
+
+.main {
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-primary-4, 0.5);;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .content {
+    background-color: white;
+    position: absolute;
+    right: 0;
+    min-width: 350px;
+    min-height: 100%;
+    box-shadow: 10px 0 20px 0 rgba(33, 33, 33, 0.3);
+    overflow-y: overlay;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+}

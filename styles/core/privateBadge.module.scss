@@ -1,0 +1,6 @@
+@import '../resources/mixins';
+
+.privateBadge {
+  margin-left: 5px;
+  background-color: $color-notification;
+}

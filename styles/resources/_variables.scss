@@ -1,0 +1,52 @@
+@import './mediaQueries';
+
+$color-dark-3: #313131;
+$color-dark-2: #4a4a4a;
+$color-dark-1: #a0a0a0;
+
+$color-red: #ff6b6b;
+$color-orange: #ffac52;
+$color-green: #8aee89;
+$color-pastel-blue: #b3eeff;
+$color-pastel-green: #9ff2e8;
+$color-pastel-purple: #e9d7fe;
+$color-pastel-red: #ffdadc;
+$color-pastel-yellow: #fff7ab;
+$color-pastel-green: #abffa9;
+
+$color-primary-5: #1B2769;
+$color-primary-4: #4654ac;
+$color-primary-3: #7d88ca;
+$color-primary-2: #c5cae7;
+$color-primary-1: #f0f2fc;
+
+$color-salmon: #ffa2a2;
+$color-notification: #b395e0;
+$color-notification-dark: darken($color-notification, 10%);
+
+$color-tonic: #5ef1d5;
+
+$color-upstream: #9895e0;
+$color-upstream-light: #e0dff6;
+
+$color-core: #599cfb;
+$color-core-light: #cce0fe;
+
+$color-downstream: #56c990;
+$color-downstream-light: #cbeedd;
+
+$base-radius: 4px;
+
+$base-transition: "0.2s ease-in-out";
+
+$color-green-contrast: darken($color-green, 25%);
+
+$color-status-terminated: $color-green-contrast;
+$color-status-to-validate: #31EBFF;
+$color-status-in-progress: $color-orange;
+$color-status-archived: $color-dark-1;
+
+$color-read-only-mode-warning: #f4ab50;
+$color-read-only-mode-warning-text: darken(#f4ab50, 50%);
+
+$max-content-width: 90vw;

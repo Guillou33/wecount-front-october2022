@@ -1,0 +1,33 @@
+@import "../../../../resources/mixins/";
+
+.headerCell {
+  background-color: white;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  border-bottom: 1px solid $color-primary-4;
+  min-width: 110px;
+}
+
+.headerCellContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .sortCarets {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+    i {
+      height: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:not(.active) {
+        color: $color-primary-3;
+      }
+    }
+  }
+}

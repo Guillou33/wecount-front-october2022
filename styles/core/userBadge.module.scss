@@ -1,0 +1,33 @@
+@import "../resources/mixins/";
+
+.userBadge {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid $color-upstream;
+  border-radius: 18px;
+  background-color: white;
+  .userName {
+    margin: 0 8px;
+    font-size: 14px;
+    color: $color-primary-4;
+    font-weight: 300;
+  }
+}
+
+.badge {
+  width: 23px;
+  height: 23px;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: $color-dark-3;
+  padding-top: 1px;
+
+  &.contrastText {
+    color: white;
+  }
+}

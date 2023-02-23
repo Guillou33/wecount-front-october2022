@@ -1,0 +1,131 @@
+@import "../../../../resources/mixins/";
+
+.topBarListingActions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // padding-left: -30px;
+    .chkListActionTop{
+      display: flex;
+      flex-direction: row;
+
+      .chkActionTop{
+        margin-left: 20px;
+        margin-right: -8px;
+        font-size: 1.2rem;
+        color: $color-primary-2;
+      }
+    }
+    .dropdownMoreActionTop{
+        // z-index:15;
+        .moreActionTop {
+            width: 28px;
+            font-size: 1.2rem;
+            color: $color-primary-2;
+            
+          }
+    }
+    .nbrSelected{
+      color: $color-primary-3;
+      font-size: 1rem;
+      margin-top: 15px;
+      margin-left: 5px;
+      margin-right: 2px;
+    }
+}
+.entryActionTop {
+  cursor: pointer;
+  color: $color-primary-3;
+
+  &:hover {
+    color: $color-red;
+  }
+}
+.disabledEntryActionTop{
+  color: $color-primary-2;
+  cursor:not-allowed;
+}
+
+.modalHeader{
+  margin-bottom: 10px;
+  // border-bottom: solid 1px $color-primary-2;
+  h2{
+    color: $color-primary-5;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+}
+
+.modalBody{
+  min-height: 50vh;
+  border-bottom: solid 1px $color-primary-2;
+  .actionsModal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px $color-primary-2;
+    .pseudoCell {
+      min-width: 125px;
+      height: 38px;
+      width: 20%;
+    }
+    .btnActionsModal{
+      .btnModal{
+        margin-left: 10px;
+        // width: 12%;
+      }
+    }
+  }
+  .shownEntriesSelected{
+    max-height: 55vh;
+    overflow-y: auto;
+    display: flex; 
+    flex-direction: column;
+    padding: 0 10px 10px 10px;
+    margin: 0 -10px 10px -10px;
+    .mainInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 1 auto;
+      margin-right: 15px;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      @include lightShadow();
+
+      .entryOrigin {
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+
+      .entryTitle {
+        color: $color-primary-5;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+      }
+
+      .entryInstruction {
+        font-weight: 300;
+        font-size: 0.8rem;
+        color: $color-primary-5;
+      }
+    }
+  
+  }
+}
+
+.modalFooter{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  // border-bottom: solid 1px $color-primary-2;
+  .btnModal{
+    margin-left: 10px;
+    width: 12%;
+  }
+}

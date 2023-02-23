@@ -1,0 +1,31 @@
+@import '../resources/mixins';
+
+.main {
+  height: 100vh;
+  background-color: $color-primary-1;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  .loginFormContainer {
+    margin-top: 150px;
+    background-color: white;
+    padding: 50px;
+    border-radius: $base-radius;
+    width: 400px;
+    .bottomForm {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media #{$small-down} {
+  .main {
+    .loginFormContainer {
+      margin-top: 100px !important;
+      padding: 35px 20px;
+      width: 90% !important;
+    }
+  }
+}

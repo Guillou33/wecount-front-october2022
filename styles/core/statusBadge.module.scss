@@ -1,0 +1,29 @@
+@import '../resources/mixins';
+
+.main {
+  display: flex;
+  align-items: center;
+  &.in-progress {
+    color: $color-status-in-progress;
+  }
+  &.to-validate {
+    color: $color-status-to-validate;
+  }
+  &.terminated {
+    color: $color-status-terminated;
+  }
+  &.archived {
+    color: $color-status-archived;
+  }
+  .circleIcon {
+    font-size: 7px;
+    vertical-align: center;
+  }
+  p {
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-left: 5px;
+    padding-top: 1px;
+  }
+}

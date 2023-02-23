@@ -1,0 +1,35 @@
+@import "../../../resources/mixins";
+
+.allUsersContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    .searchContainer{
+        width: 30%;
+        margin-left: auto;
+        margin-right: 10%;
+    }
+    .allUsers{
+        margin: auto;
+        width: 80%;
+        margin-top: 20px;
+        @include lightShadow();
+        thead{
+            background-color: white;
+            th{
+                border-bottom: solid 1px $color-primary-5;
+            }
+        }
+    }
+
+}
+
+.userRow{
+    height: 80px;
+}
+
+.nbEntries{
+    color: $color-dark-1;
+    font-style: italic;
+}

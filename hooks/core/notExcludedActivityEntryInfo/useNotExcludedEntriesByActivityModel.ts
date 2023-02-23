@@ -1,0 +1,10 @@
+import makeUseNotExcludedEntriesInfoBy from "@hooks/core/notExcludedActivityEntryInfo/makeUseNotExcludedEntriesInfoBy";
+import { makeSelectNotExcludedEntryInfoByActivityModel } from "@selectors/activityEntryInfo/selectNotExcludedEntryInfoByActivityModel";
+
+const selectNotExcludedEntryInfoByActivityModel = makeSelectNotExcludedEntryInfoByActivityModel();
+
+const useNotExcludedEntriesInfoByActivityModel = makeUseNotExcludedEntriesInfoBy(
+    selectNotExcludedEntryInfoByActivityModel
+);
+
+export default useNotExcludedEntriesInfoByActivityModel;

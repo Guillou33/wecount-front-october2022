@@ -1,0 +1,20 @@
+@import "../../../../resources/mixins";
+
+.reductionBadge {
+  font-size: 16px;
+  padding: 5px 8px;
+  min-width: 75px;
+  border-radius: $base-radius;
+  margin-left: 15px;
+  text-align: center;
+}
+.reductionBadgeBase{
+  color: $color-primary-5;
+}
+.reductionBadgeDown{
+  color: $color-status-to-validate;
+}
+.reductionBadgeUp{
+  color: $color-orange;
+
+}

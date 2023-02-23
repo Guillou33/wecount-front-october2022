@@ -1,0 +1,36 @@
+@import "../../resources/mixins";
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .tab {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    padding: 0 25px;
+    cursor: pointer;
+    &.active {
+      color: $color-primary-4;
+    }
+    .activeMarker{
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      background-color: $color-primary-4;
+    }
+
+    .badge {
+      background-color: $color-upstream;
+      color: white;
+      margin-left: 10px;
+      border-radius: 500px;
+      padding: 4px 8px;
+      font-size: 10px;
+    }
+  }
+}

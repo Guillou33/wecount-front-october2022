@@ -1,0 +1,142 @@
+@import "../../../resources/mixins";
+
+.categoryPlan {
+  @include lightShadow();
+  margin-right: 35px;
+  &:not(:first-child) {
+    margin-top: 25px;
+  }
+
+  .reductionText {
+    margin-left: auto;
+    padding-left: 15px;
+  }
+  .definitionLever{
+    padding: 20px;
+    // margin: 0 20px;
+    display: flex; 
+    flex-direction: row;
+    // width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px $color-primary-2;
+    .labelDefinitionLever{
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 0;
+      color: $color-primary-4;
+      min-width: 15%;
+    }
+    // .view{
+    //   min-width: 20%;
+    // }
+  }
+}
+
+.categoryPlanHeader {
+  display: flex;
+  align-items: center;
+  // padding-right: 35px;
+}
+
+.category {
+  width: 100%;
+  margin-top: 0 !important;
+  
+  @include lightShadow();
+}
+.moreAction {
+  width: 28px;
+  font-size: 1.2rem;
+  color: $color-primary-2;
+  cursor: pointer;
+}
+.addActionButton {
+  margin-left: 15px;
+}
+.actionPlansContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.actionPlans {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 35px 35px 62px 10px;
+
+  display: grid;
+  grid-template-columns: 20px minmax(100px, 2fr) 3fr 1.25fr 0.75fr;
+  gap: 10px 25px;
+
+  width: 100%;
+
+  border-bottom: solid 1px $color-primary-1;
+  // @include lightShadow();
+}
+
+.gridLabel {
+  font-weight: 500;
+  padding-left: 5px;
+  font-size: 15px;
+  color: $color-dark-3;
+}
+
+.gridLastLabel {
+  grid-column: span 2;
+}
+
+.helpContainer {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: $color-primary-1;
+  border-radius: 500px;
+  padding: 6px 10px;
+  font-weight: 300;
+  font-size: 0.9rem;
+  width: 22%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.helpIcon {
+  color: $color-primary-3;
+  font-size: 1.1rem;
+}
+
+.helpText {
+  margin: 0 10px;
+  margin-top: 2px;
+}
+
+.helpLink {
+  color: $color-primary-3;
+  text-decoration: underline;
+}
+
+.reductionText{
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 15px;
+}
+.activityModelsContainer{
+  .activityModelCard{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    border-top: 1px solid $color-primary-1;
+    border-bottom: 1px solid $color-primary-1;
+
+    .reductionResultField{
+      color: #4a4a4a;
+      font-size: 15px;
+      color: $color-primary-4;
+      border-bottom: 0;
+
+    }
+  }
+}

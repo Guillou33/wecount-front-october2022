@@ -1,0 +1,105 @@
+@import "../../../resources/mixins";
+
+$horizontalPadding: 15px;
+
+$upstream-transparent: lighten($color-upstream, 22%);
+$core-transparent: lighten($color-core, 30%);
+$downstream-transparent: lighten($color-downstream, 38%);
+
+$upstream-shade: lighten($color-upstream, 25%);
+$core-shade: lighten($color-core, 32%);
+$downstream-shade: lighten($color-downstream, 40%);
+
+.tableWrapper {
+  max-height: calc(100vh - 180px);
+  overflow: auto;
+  border: 1px solid $color-primary-2;
+  border-radius: $base-radius;
+}
+
+.overviewTable {
+  overflow: visible;
+  border-collapse: separate;
+  border-spacing: 0;
+  position: relative;
+
+  .stickyHeader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: darken($color-primary-1, 5%);
+    z-index: 1;
+
+    &.onTop {
+      z-index: 2;
+    }
+  }
+
+  .stickyColumn {
+    position: sticky;
+    left: 0;
+  }
+
+  tr {
+    border: 1px solid $color-primary-2;
+  }
+
+  td {
+    border-right: 1px solid $color-primary-2;
+    border-bottom: 1px solid $color-primary-2;
+    padding: 22px $horizontalPadding;
+    background-color: white;
+  }
+  td:first-child,
+  th:first-child {
+    padding-left: $horizontalPadding;
+  }
+  td:last-child,
+  th:last-child {
+    padding-right: $horizontalPadding;
+  }
+  th {
+    text-align: center;
+  }
+  .subTotalRow {
+    &.upstream {
+      background-color: $upstream-transparent;
+    }
+    &.core {
+      background-color: $core-transparent;
+    }
+    &.downstream {
+      background-color: $downstream-transparent;
+    }
+  }
+  .overviewTableRow {
+    .categoryCell {
+      &.upstream {
+        background-color: $upstream-transparent;
+      }
+      &.core {
+        background-color: $core-transparent;
+      }
+      &.downstream {
+        background-color: $downstream-transparent;
+      }
+    }
+    td {
+      transition: background-color 0.25s;
+    }
+    &:hover {
+      .upstream:not(.categoryCell) {
+        background-color: $upstream-shade;
+      }
+      .core:not(.categoryCell) {
+        background-color: $core-shade;
+      }
+      .downstream:not(.categoryCell) {
+        background-color: $downstream-shade;
+      }
+    }
+  }
+  .actionPlanCell {
+    color: darkgreen;
+  }
+}

@@ -1,0 +1,81 @@
+@import "../../../resources/mixins";
+
+.actionPlan {
+  display: contents;
+  border: solid 1px $color-primary-2;
+
+}
+
+.dropdownOptions{
+  align-self: center;
+}
+
+.actionPlanInput {
+  margin-bottom: 0 !important;
+}
+
+.commentsInput{
+  height: 40px;
+  display: block;
+  margin-bottom: 0px;
+  width: 100%;
+  border-radius: 4px;
+  border: solid 1px $color-primary-2;
+  padding: 8px 15px;
+  color: $color-primary-4;
+  &::placeholder {
+    color: $color-primary-2;
+  }
+}
+
+.reductionBadge {
+  margin-left: 18%;
+  margin-top: 10px;
+  
+}
+
+.reductionInput {
+  // justify-self: flex-end;
+  width: auto !important;
+  .input {
+    width: 35px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  text-align: right;
+  margin-right: -50%;
+
+
+  .deleteActionPlan {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 35px;
+    border: none;
+    color: $color-primary-2;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+}
+
+.modalLabel {
+  font-weight: 500;
+  color: $color-primary-5;
+  padding-left: 5px;
+}
+
+.editionModalEnd {
+  margin: auto;
+  display: block;
+}
+.moreAction {
+  width: 28px;
+  font-size: 1.2rem;
+  color: $color-primary-2;
+  cursor: pointer;
+}

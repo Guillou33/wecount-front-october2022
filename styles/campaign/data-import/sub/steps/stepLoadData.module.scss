@@ -1,0 +1,17 @@
+@import "../../../../resources/mixins/";
+
+.fileInput {
+  width: 100%;
+  max-width: 580px;
+  margin: auto;
+  margin-top: 22px;
+}
+
+.loadDataBottomBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancelLink:hover {
+  text-decoration: none;
+}

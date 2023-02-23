@@ -1,0 +1,26 @@
+@import "../../../../../resources/mixins";
+
+.statusFilter {
+  display: flex;
+  align-items: center;
+  margin-right: 22px;
+  flex-grow: 1;
+
+  .label {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+
+  .statusIcon {
+    font-size: 10px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+  }
+}
+
+.multiSelect {
+  margin-left: 5px;
+  width: 0;
+  flex-grow: 1;
+}

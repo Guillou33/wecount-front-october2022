@@ -1,0 +1,52 @@
+@import "../../../resources/mixins";
+
+.settingsLine {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 90px;
+
+  .columnSettings {
+    height: 33px;
+    padding: 5px 12px;
+  }
+}
+
+@media #{$small-down} {
+  .main {
+    overflow-x: scroll;
+    table {
+      min-width: 900px;
+    }
+  }
+}
+
+.listingTableWrapper {
+  margin-top: 33px;
+  overflow-x: auto;
+  @include lightShadow();
+
+  // scrollbar on top hack
+  transform: rotateX(180deg);
+
+  .listingTable {
+    white-space: nowrap;
+
+    // scrollbar on top hack
+    transform: rotateX(180deg);
+
+    thead {
+      background-color: darken($color-primary-1, 5%);
+    }
+    tbody {
+      background-color: white;
+    }
+  }
+}
+
+.noResults {
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}

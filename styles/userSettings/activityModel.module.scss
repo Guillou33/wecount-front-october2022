@@ -1,0 +1,51 @@
+@import "../resources/mixins";
+
+.activityModel {
+  transition: background-color 0.3s ease;
+
+  &:not(:first-child) {
+    border-top: solid 1px $color-primary-1;
+  }
+
+  cursor: pointer;
+  height: 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  .activityModelName {
+    color: $color-primary-4;
+    font-size: 11px;
+    transition: color 0.3s ease;
+  }
+
+  .leftBlock {
+    display: flex;
+    align-items: center;
+  }
+
+  .activityBadge {
+    margin: 0 15px;
+    padding: 2px;
+    
+    .activityBadgeText {
+      margin: 0 8px;
+    }
+  }
+
+  &.greyedOut {
+    background-color: rgba(195, 195, 195, 0.1);
+
+    .activityModelName {
+      color: $color-dark-1;
+    }
+    .activityBadge {
+      background-color: $color-orange;
+    }
+  }
+
+  &.clickDisabled {
+    cursor: default;
+  }
+}

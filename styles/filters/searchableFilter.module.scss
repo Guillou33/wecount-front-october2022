@@ -1,0 +1,17 @@
+@import "../resources/mixins";
+
+.searchIcon {
+  color: $color-primary-3;
+}
+
+.searchBox {
+  border: 1px solid $color-primary-2;
+  border-radius: 5000px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 20px;
+
+  .searchInput {
+    flex: 1;
+  }
+}

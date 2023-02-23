@@ -1,0 +1,95 @@
+@import "../../../../resources/mixins/";
+
+$font-size-adjustement: 2px;
+
+.activityHeader {
+  background-color: white;
+  padding-top: 50px;
+  margin: auto;
+
+  .closeContainer {
+    display: flex;
+    justify-content: space-between;
+    i {
+      cursor: pointer;
+    }
+    .closeButton {
+      font-size: 20px;
+      margin-left: auto;
+      &:hover {
+        color: $color-primary-4;
+      }
+    }
+    .deleteActivity {
+      font-size: 13px;
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+  .activityBreadcrums {
+    font-size: 10px + $font-size-adjustement;
+    margin-bottom: 10px;
+  }
+  .campaignName {
+    color: $color-primary-2;
+    font-weight: bold;
+  }
+  .mainInfo {
+    width: 75%;
+  }
+  .activityTitle {
+    color: $color-primary-5;
+    font-size: 28px + $font-size-adjustement;
+    margin-bottom: 13px;
+    line-height: 35px;
+    font-weight: bold;
+    width: 100%;
+    padding-bottom: 3px;
+  }
+  .activityTitleInput {
+    padding: 0;
+  }
+  .activityDescription {
+    color: $color-dark-3;
+    font-size: 15px;
+    font-weight: 100;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 3px;
+    line-height: 25px;
+  }
+  .activityDescriptionInput {
+    padding: 0;
+  }
+  .activityModelLabel {
+    color: $color-primary-4;
+    font-weight: bold;
+  }
+
+  .headerRow {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: flex-start;
+
+    .pushRight {
+      margin-left: auto;
+    }
+  }
+  .progress {
+    flex: 0 0 400px;
+  }
+  
+  .tabs {
+    border: none;
+    margin-bottom: 0;
+  }
+}
+
+@media #{$small-down} {
+  .activityHeader {
+    .headerContent {
+      margin: 0 50px;
+    }
+  }
+}

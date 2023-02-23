@@ -1,0 +1,21 @@
+$color-shadow:                    rgba(0, 0, 0, 0.10);
+$shadow-offset-x:                  0px;
+$shadow-offset-x-big:                  3px;
+$shadow-offset-y:                  3px;
+$shadow-offset-y-big:                  3px;
+$shadow-offset-blur-radius:        3px;
+$shadow-offset-blur-radius-big:        7px;
+$shadow-offset-spread-radius:        0px;
+$shadow-offset-spread-radius-big:        3px;
+
+@mixin shadow {
+    box-shadow: $shadow-offset-x-big $shadow-offset-y-big $shadow-offset-blur-radius-big $shadow-offset-spread-radius-big $color-shadow
+}
+
+@mixin shadowLeft {
+  box-shadow: -$shadow-offset-x-big $shadow-offset-y-big $shadow-offset-blur-radius-big $shadow-offset-spread-radius-big $color-shadow
+}
+
+@mixin lightShadow {
+  box-shadow: 0 2px 5px 0 rgba(197, 202, 231, 0.8);
+}

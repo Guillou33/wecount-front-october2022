@@ -1,0 +1,73 @@
+@import "../../resources/mixins";
+
+.menuItem {
+  cursor: pointer;
+  color: $color-primary-3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 23px;
+
+  .iconContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    width: 25px;
+    overflow-x: hidden;
+  }
+  .menuTextContainer {
+    cursor: pointer;
+    margin-left: 23px;
+    width: 100%;
+
+    p {
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    .leftSubMenuContainer {
+      margin-top: 24px;
+
+      .subMenuItem {
+        cursor: pointer;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .subMenuText {
+          width: 100%;
+          font-weight: 300;
+          margin-bottom: 0;
+          color: $color-primary-2;
+          &.allCampaigns {
+            // text-decoration: underline;
+            .eyeIcon {
+              margin-right: 7px;
+            }
+          }
+        }
+        .activeMarker {
+          display: none;
+          margin-left: 10px;
+          font-size: 6px;
+          color: $color-tonic;
+        }
+        &.active {
+          .subMenuText {
+            color: white;
+          }
+          .activeMarker {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    color: white;
+    .iconContainer {
+      color: $color-tonic;
+    }
+  }
+}

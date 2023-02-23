@@ -1,0 +1,17 @@
+@import "../../../../../resources/mixins/";
+
+.content {
+  margin-top: 15px;
+  font-weight: 300;
+  color: $color-primary-5;
+}
+
+.inputList {
+  margin-top: 16px;
+}
+
+.confirmButton {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}

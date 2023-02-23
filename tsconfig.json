@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "downlevelIteration": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".", /* Base directory to resolve non-absolute module names. */
+    "paths": {
+        "@reducers/*": ["reducers/*"],
+        "@lib/*": ["lib/*"],
+        "@custom-types/*": ["custom-types/*"],
+        "@components/*": ["components/*"],
+        "@actions/*": ["actions/*"],
+        "@sagas/*": ["sagas/*"],
+        "@errors/*": ["errors/*"],
+        "@hooks/*": ["hooks/*"],
+        "@styles/*": ["styles/*"],
+        "@selectors/*": ["selectors/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "next.config.js",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

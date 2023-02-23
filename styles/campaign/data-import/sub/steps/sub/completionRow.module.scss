@@ -1,0 +1,60 @@
+@import "../../../../../resources/mixins/";
+
+.defaultField {
+  margin: 0;
+
+  .hasWarning {
+    border-color: $color-orange;
+
+    &:not(:focus) {
+      color: $color-orange;
+    }
+  }
+
+  .hasError {
+    border-color: $color-red;
+
+    &:not(:focus) {
+      color: $color-red;
+    }
+  }
+
+  .unitInput.hasError {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+}
+
+.row {
+  display: contents;
+
+  &.hasError {
+    td {
+      border-bottom: 1px solid $color-red;
+    }
+  }
+
+  &.hasWarning {
+    td {
+      border-bottom: 1px solid $color-orange;
+    }
+  }
+
+  .checkbox {
+    display: block;
+    height: 18px;
+    transform: translateY(2px);
+    cursor: pointer;
+  }
+}
+
+.unitCell {
+  display: flex;
+}
+
+.unitButton {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 8px 12px;
+}

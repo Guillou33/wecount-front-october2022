@@ -1,0 +1,104 @@
+@import "../../../resources/mixins/";
+
+.category {
+  background-color: white;
+  cursor: pointer;
+  padding: 20px;
+  height: 80px;
+  border-radius: $base-radius;
+  // margin-top: 30px;
+  display: flex;
+  align-items: center;
+  
+  // justify-content: center;
+  // @include lightShadow();
+
+  p {
+    margin: 0;
+    width: fit-content;
+  }
+  .pictoContainer {
+    position: relative;
+    .picto {
+      width: 28px;
+      padding: 5px;
+      border-radius: $base-radius;
+    }
+    .inProgressBadge {
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+
+      &.NEW_ACTIVITY {
+        background-color: $color-dark-1;
+      }
+      &.IN_PROGRESS {
+        background-color: $color-status-in-progress;
+      }
+      &.TO_VALIDATE {
+        background-color: $color-status-to-validate;
+      }
+      &.TERMINATED {
+        background-color: $color-status-terminated;
+      }
+    }
+  }
+  .categoryName {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+
+    p {
+      margin-left: 15px;
+      font-weight: 500;
+      color: $color-primary-4;
+      width: auto;
+      max-width: 350px;
+      text-align: justify;
+    }
+
+    
+  }
+  .tooltipDescription {
+    margin-left: 3px;
+    margin-right: 5px;
+    color: $color-primary-2;
+  }
+  .activityNumber {
+    color: $color-primary-2;
+    font-weight: 300;
+  }
+  .categoryCounterBadge {
+    margin-left: auto;
+    margin-right: 20px;
+    // align-self: center;
+    color: $color-primary-4;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .reductionText {
+    margin-left: 20px;
+    margin-right: -10px;
+    text-align: center;
+    min-width: 90px;
+    margin-bottom: 0;
+  }
+
+  &.opened {
+    background-color:$color-primary-1;
+  }
+}
+.picto {
+  background-color: $color-primary-4;
+}
+.spinner {
+  height: 20px;
+  width: 20px;
+  margin-left: auto;
+  flex: 0 0 auto;
+}

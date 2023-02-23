@@ -1,0 +1,41 @@
+@import "../../../../resources/mixins";
+
+.modalLabel {
+  margin-top: 20px;
+}
+
+.optionalLabel {
+  display: inline;
+  color: $color-dark-1;
+  font-style: italic;
+}
+
+.stepContainer {
+  margin-top: 50px;
+  padding: 0 40px;
+
+  .stepComment {
+    p {
+      // font-style: italic;
+      color: $color-primary-4;
+    }
+  }
+
+  .mainContainer {
+    margin-top: 15px;
+
+    .templateSelectorLabel {
+      margin: 0;
+    }
+  
+    .field {
+      max-width: 300px;
+    }
+  
+    .nextPreviousButtonsContainer {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

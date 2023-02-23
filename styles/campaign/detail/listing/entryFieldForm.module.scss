@@ -1,0 +1,178 @@
+@import "../../../resources/mixins";
+
+.dataMainFieldContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.emissionFactor {
+  grid-area: ef;
+}
+
+.dataFieldContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldOne {
+  grid-area: field1;
+}
+
+.fieldTwo {
+  grid-area: field2;
+}
+
+.fieldUncertainty {
+  grid-area: uncertainty;
+}
+
+.comments {
+  grid-area: comments;
+}
+
+.sources {
+  grid-area: sources;
+}
+
+.directTco2 {
+  grid-area: directTco2;
+}
+
+.fieldEf {
+  grid-area: inputEf;
+}
+
+.fieldUnitNumber {
+  grid-area: unitNumber;
+}
+
+.dataFieldContainer2 {
+  display: flex;
+  width: 99%;
+  flex-direction: row;
+}
+.dataFieldContainerStandard {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  .dataFieldContainer {
+    width: 32.6%;
+
+    .uncertaintyFieldContainer {
+      margin-left: 5px;
+    }
+  }
+}
+.dataFieldContainerEmissionFactor {
+  display: flex;
+  width: 99%;
+  flex-direction: row;
+  .dataFieldContainerEmissionFactorUnit {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+  }
+  .dataFieldContainer {
+    display: flex;
+    width: 99%;
+    flex-direction: column;
+    .uncertaintyFieldContainer {
+      width: 50%;
+      margin-left: 5px;
+      .uncertainty {
+        .label {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+.dataFieldContainerDirectTCO2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  .efLabelContainer {
+    display: flex;
+    align-items: center;
+  }
+  .infoIcon {
+    color: $color-primary-3;
+  }
+
+  .entryFields {
+    display: flex;
+    flex-direction: column;
+  }
+  .textArea {
+    width: 100%;
+  }
+
+  .uncertaintyFieldContainer {
+    width: 100%;
+    // margin-top: 6px;
+    // margin-left: 5px;
+  }
+  .searchField {
+    width: 99.5%;
+  }
+}
+
+.computationModeSelectorContainer {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: $color-primary-3;
+  font-weight: 300;
+  font-size: 15px;
+  white-space: nowrap;
+
+  .computationMethodSelector {
+    // width: fit-content;
+
+    .mainField {
+      background-color: transparent;
+      border-color: transparent;
+      text-decoration: underline;
+      padding: 0 5px;
+    }
+
+    .options {
+      right: 0;
+      font-weight: 400;
+      color: $color-dark-2;
+    }
+  }
+}
+
+.fieldWithUnit {
+  display: flex;
+  align-items: center;
+}
+
+.unit {
+  margin-left: 5px;
+  margin-bottom: 0;
+  // margin-top: 15px;
+  font-weight: 300;
+  // white-space: nowrap;
+  //   overflow-x: hidden;
+  //   text-overflow: ellipsis;
+}
+
+.dataFieldContainer {
+  .field {
+    height: 40px;
+    margin: 0;
+    margin-bottom: 0;
+  }
+}
+
+.label {
+  width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: bold;
+}

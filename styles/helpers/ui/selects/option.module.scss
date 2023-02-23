@@ -1,0 +1,25 @@
+@import "../../../resources/mixins";
+
+.option {
+  cursor: pointer;
+  padding: 7px 12px;
+  font-weight: 300;
+
+  &.disabled {
+    color: $color-primary-2;
+    font-style: italic;
+    cursor: not-allowed;
+  }
+
+  &.selected {
+    background-color: $color-primary-1;
+    color: $color-primary-4;
+  }
+
+  &:hover:not(.disabled):not(.selected)
+   {
+    background-color: lighten($color-primary-1, 2%)
+  }
+
+  transition: background-color 0.2s
+}

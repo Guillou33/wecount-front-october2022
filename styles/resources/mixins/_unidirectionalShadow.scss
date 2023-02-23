@@ -1,0 +1,28 @@
+@mixin unidirectionalRightShadow($color: rgba(197, 202, 231, 0.5), $size: 5px) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -$size;
+    width: $size;
+    background: linear-gradient(to right, $color, rgba($color, 0));
+    @content;
+  }
+}
+
+@mixin unidirectionalBottomShadow(
+  $color: rgba(197, 202, 231, 0.5),
+  $size: 5px
+) {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -$size;
+    right: 0;
+    left: 0;
+    height: $size;
+    background: linear-gradient(to bottom, $color, rgba($color, 0));
+    @content;
+  }
+}

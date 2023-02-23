@@ -1,0 +1,412 @@
+@import "../../resources/mixins";
+
+.main {
+  margin-top: 30px;
+
+  .mainDashboardContainer {
+    border-radius: $base-radius;
+    @include shadow();
+    padding: 40px 40px 30px;
+
+    .scopesDasboardsContainer {
+      display: flex;
+      align-items: stretch;
+
+      .barContainer {
+        position: relative;
+        flex: 2;
+        padding-left: 30px;
+      }
+
+      .doughnutContainer {
+        position: relative;
+        flex: 1;
+      }
+    }
+
+    .mainDashboardHeader {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .categoriesDash {
+    margin-top: 60px;
+    border-radius: $base-radius;
+    @include shadow();
+    padding: 40px 40px 30px;
+    background-color: white;
+
+  }
+
+  .flexThis{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+    .dropTitle{
+      margin: 7px;
+    }
+  }
+
+  .flexThis{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+    .dropTitle{
+      margin: 7px;
+    }
+  }
+
+
+  .tagSelector {
+    min-width: 100px;
+    max-width: 200px;
+  
+
+  
+    .placeholder {
+      color: $color-primary-4;
+      font-size: 0.9rem;
+    }
+
+  
+    .removeTagButton {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: 0.8rem;
+      padding: 0;
+      padding-left: 5px;
+      color: $color-primary-2;
+  
+      &:hover {
+        color: $color-primary-4;
+      }
+    }
+
+  }
+
+  
+.dough {
+      width: auto;
+      height: 600px;
+      margin-top: 25px;
+
+      &:hover {
+        color: $color-primary-4;
+      }
+  }
+
+  .categoriesDashboardContainer {
+    margin-top: 60px;
+    border-radius: $base-radius;
+    @include shadow();
+    padding: 40px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+    .titleContainer {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .results {
+        margin-left: auto;
+        p {
+          margin: 0;
+        }
+      }
+
+      .comparisonTitleWrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .targetResultWrapper {
+        color: green;
+
+        .targetResult {
+          color: darkgreen;
+        }
+      }
+
+      &.overviewTableTitle {
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .topBar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .scopeTitle {
+      align-self: flex-start;
+    }
+
+    .interactiveChartInfo {
+      width: 100%;
+      color: $color-primary-4;
+    }
+
+    .scopeSeletorContainer {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      .scopeSelector {
+        width: 200px;
+      }
+    }
+
+    .barContainer {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .categorySelectorContainer {
+      margin-right: auto;
+      display: flex;
+      justify-content: flex-start;
+
+      .categorySelector {
+        min-width: 200px;
+      }
+    }
+
+    .horizontalBarContainer {
+      width: 100%;
+      max-width: 1500px;
+    }
+
+    .overviewTableContainer {
+      width: 100%;
+    }
+
+    .dougnnutContainer {
+      width: 100%;
+      display: flex;
+
+      .scopeSelectors {
+        margin-right: 15px;
+
+        .scopeSelector {
+          margin-bottom: 5px;
+          display: flex;
+          align-items: center;
+
+          .scopeSelectorLabel {
+            margin: 0;
+            margin-left: 12px;
+            cursor: pointer;
+
+            &.hidden {
+              text-decoration: line-through;
+              color: $color-dark-1;
+            }
+          }
+
+          .upstreamCheckedSelector {
+            background-color: $color-upstream;
+          }
+
+          .coreCheckedSelector {
+            background-color: $color-core;
+          }
+
+          .downstreamCheckedSelector {
+            background-color: $color-downstream;
+          }
+        }
+      }
+    }
+
+    .chartBreadcrums {
+      width: 100%;
+
+      .breadcrumSeparator {
+        color: $color-primary-4;
+        font-size: 12px;
+        margin: 0 6px;
+      }
+    }
+
+    &.warningPresent {
+      margin-top: 30px;
+    }
+
+    &.first {
+      margin-top: 0;
+    }
+
+    &.spaceBottom {
+      margin-bottom: 60px;
+    }
+  }
+
+  .dynamicHeight {
+    max-height: 780px;
+    height: 66vw;
+  }
+
+  .comparisonTabs {
+    margin-top: -30px;
+  }
+
+  .historyListCampaignSelection {
+    color: $color-primary-5;
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+
+    .campaignSelector {
+      margin-left: 8px;
+    }
+
+    .noComparisonAvailable {
+      padding: 5px 8px;
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+
+  .historyTableWrapper {
+    min-height: calc(100vh - 190px);;
+  }
+
+  .searchHistory {
+    width: auto;
+    margin-left: auto;
+  }
+
+}
+
+.selectionContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.switchOverviewTypeContainer {
+  height: 33px;
+  padding: 0 5px;
+  border-radius: $base-radius;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  p {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &.active {
+    border-color: $color-primary-4;
+    background-color: $color-primary-4;
+    color: white;
+  }
+
+  .overviewTypeSwitcher {
+    padding: 5px;
+
+    .bar {
+      background-color: $color-primary-4  !important;
+    }
+  }
+
+  .overviewTypeLabel {
+    display: flex;
+
+    img {
+      margin-right: 2px;
+      width: 15px;
+    }
+  }
+}
+
+.productsKpiTable {
+  text-align: right;
+  box-shadow: none;
+
+  thead tr {
+    border-bottom: 1px solid $color-primary-2;
+  }
+}
+
+.productKpiTableWrapper {
+  border: 1px solid $color-primary-2;
+  border-radius: $base-radius;
+}
+
+.categoriesDougnutTotal {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+.dashboardInfos {
+  margin-top: 45px;
+  padding: 20px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.trajectoryScopeSelector {
+  max-width: 180px;
+}
+
+.reglementationTabletitleContainer {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.siteSelectorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .selectLabel {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 15px;
+      margin-right: 3px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .siteSelector {
+    margin-left: 10px;
+    max-width: 250px;
+  }
+}
+
+.reglementationTableTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

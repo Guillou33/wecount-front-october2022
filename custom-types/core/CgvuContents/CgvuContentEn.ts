@@ -1,0 +1,1 @@
+export const CGVU_CONTENT_EN = ``;

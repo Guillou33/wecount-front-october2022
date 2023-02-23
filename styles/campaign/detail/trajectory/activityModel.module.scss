@@ -1,0 +1,91 @@
+@import "../../../resources/mixins";
+
+.activityModelContainer {
+  background-color: white;
+  padding: 0 20px;
+  border-radius: 4px;
+  width: 100%;
+
+  &.opened {
+    padding-bottom: 10px;
+    border-bottom: none;
+  }
+
+  &:not(:first-child) {
+    border-top: solid 1px $color-primary-1;
+  }
+  .activityModel {
+    cursor: pointer;
+    width: 100%;
+    height: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.noEdit {
+      cursor: default;
+    }
+    .leftPart {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      p {
+        margin-bottom: 0;
+      }
+      .activityModelName {
+        font-size: 10px;
+        font-weight: 500;
+        color: $color-primary-4;
+      }
+      .tooltipDescription {
+        margin-left: 3px;
+        margin-right: 5px;
+        color: $color-primary-2;
+      }
+      .activityNumber {
+        font-size: 10px;
+        color: $color-primary-2;
+      }
+      .inProgressBadge {
+        margin-right: 4px;
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+
+        &.NEW_ACTIVITY {
+          background-color: $color-dark-1;
+        }
+        &.IN_PROGRESS {
+          background-color: $color-status-in-progress;
+        }
+        &.TO_VALIDATE {
+          background-color: $color-status-to-validate;
+        }
+        &.TERMINATED {
+          background-color: $color-status-terminated;
+        }
+      }
+    }
+    .rightPart {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 10%;
+      .counterBadge {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+        color: $color-primary-4;
+        width: 40%;
+      }
+      .foldButton {
+        display: none;
+      }
+      .reductionText {
+        margin-left: auto;
+        padding-left: 35px;
+        width: 75%
+      }
+    }
+  }
+}

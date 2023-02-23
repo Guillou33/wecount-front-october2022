@@ -1,0 +1,6 @@
+@import "../resources/mixins";
+
+.tagIcon {
+  color: $color-primary-5;
+  transform: scaleX(-1);
+}

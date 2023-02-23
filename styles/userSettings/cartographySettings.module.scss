@@ -1,0 +1,107 @@
+@import "../resources/mixins";
+
+.helpMessage {
+  margin-top: 30px;
+}
+
+.toolBar {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.expandFoldButtonsContainer {
+  background-color: white;
+  border: 1px solid $color-primary-4;
+  border-radius: $base-radius;
+  padding: 5px;
+  display: flex;
+  align-items: flex-start;
+
+  button {
+    background-color: transparent;
+    border: none;
+    background-color: $color-primary-2;
+    border-radius: $base-radius;
+    width: 15px;
+    transition: background-color #{$base-transition};
+
+    &:focus {
+      outline: none;
+    }
+
+    &.expandButton {
+      height: 21px;
+    }
+    &.foldButton {
+      height: 10px;
+      margin-right: 5px;
+    }
+
+    &:hover, &.active {
+      background-color: $color-primary-4;
+    }
+  }
+}
+
+.categoryContainer {
+  display: flex;
+  margin: 30px 0 50px 0;
+  cursor: pointer;
+
+  .scopedCategoryList {
+    flex: 1 1;
+    margin: 0 15px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .header {
+      // background-color: $color-primary-4;
+    }
+  }
+
+  .header {
+    border-bottom: solid 1px $color-primary-3;
+    // border-radius: $base-radius;
+    padding: 10px;
+    color: $color-primary-4;
+    font-weight:900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .scopeName {
+      margin: 0;
+      padding: 5px 0;
+      font-size: 1.3rem;
+      font-weight:900;
+    }
+    .total {
+      p {
+        margin: 0;
+        text-align: right;
+        font-weight: 500;
+      }
+      padding: 5px 0 5px 20px;
+      border-left: 2px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@media #{$medium-down} {
+  .categoryContainer {
+    flex-direction: column;
+
+    .scopedCategoryList {
+      margin: 0;
+    }
+
+    .scopedCategoryList:not(:first-child) {
+      margin-top: 50px;
+    }
+  }
+}

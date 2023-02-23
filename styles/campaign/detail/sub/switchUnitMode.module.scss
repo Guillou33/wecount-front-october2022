@@ -1,0 +1,60 @@
+@import "../../../resources/mixins";
+
+.switchUnitContainer {
+  height: 33px;
+  padding: 0;
+  border-radius: $base-radius;
+  display: flex;
+  justify-content: center;
+
+  .unit {
+    border: 1px solid $color-primary-2;
+    width: 42px;
+    outline: none;
+    color: $color-primary-3;
+    font-weight: 400;
+    background-color: white;
+    position: relative;
+
+    transition: color 0.5s;
+
+    &:first-child {
+      border-radius: $base-radius 0 0 $base-radius;
+      border-right: none;
+    }
+
+    &:last-child {
+      border-radius: 0 $base-radius $base-radius 0;
+      border-left: none;
+    }
+
+    &.active {
+      color: white;
+    }
+
+    &:hover:not(.active) {
+      border-color: $color-primary-3;
+    }
+  }
+
+  .small {
+    font-size: 10px;
+  }
+
+  .activeMark {
+    --offset: -1px;
+    border-radius: inherit;
+    background-color: $color-primary-4;
+    position: absolute;
+    z-index: 1;
+    top: var(--offset);
+    left: var(--offset);
+    bottom: var(--offset);
+    right: var(--offset);
+  }
+
+  .text {
+    position: relative;
+    z-index: 2;
+  }
+}

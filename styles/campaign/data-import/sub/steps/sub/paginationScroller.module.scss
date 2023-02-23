@@ -1,0 +1,31 @@
+.paginationScroller {
+  --size: 13px;
+
+  height: var(--size);
+  background-color: #f1f1f1;
+  width: 100%;
+  position: sticky;
+  bottom: 92px;
+  display: grid;
+  grid-template-columns: calc(var(--size) + 5px) 1fr calc(var(--size) + 5px);
+  overflow: hidden;
+
+  .gutter {
+    display: grid;
+  }
+
+  .scroller {
+    background-color: lighten(#c1c1c1, 5%);
+    cursor: pointer;
+
+  }
+
+  .paginationButton {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    line-height: 0;
+  }
+}

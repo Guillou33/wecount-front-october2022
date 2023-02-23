@@ -1,0 +1,36 @@
+@import '../../../resources/mixins';
+
+.categoryContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: $base-radius;
+  margin: 30px 0;
+  @include lightShadow();
+  .activityModelsContainer {
+    border-radius: $base-radius;
+  }
+  
+  &.open {
+    @include lightShadow();
+    .category {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .activityNumber {
+      color: $color-primary-3 !important;
+    }
+    .category {
+      // background-color: darken($color-primary-1, 5%);
+    }
+  }
+
+  .picto {
+    background-color: $color-primary-4;
+  }
+  .spinner {
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+    flex: 0 0 auto;
+  }
+}

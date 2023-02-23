@@ -1,0 +1,43 @@
+@import "../../../resources/mixins";
+
+.select {
+  position: relative;
+  color: $color-primary-3;
+}
+
+.dropdownIcon {
+  transition: color 0.3s;
+  transform: scale(0.75);
+  color: $color-primary-3;
+
+  &.opened {
+    color: $color-primary-4;
+  }
+}
+
+.optionContainer {
+  background-color: white;
+  max-height: 370px;
+  overflow-y: auto;
+  border-radius: 4px;
+  text-align: left;
+  padding: 8px 0;
+  position: absolute;
+  top: calc(100% + 12px);
+  @include lightShadow();
+  z-index: 10;
+  width: max-content;
+  min-width: 100%;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  &.center {
+    left: 50%;
+  }
+}

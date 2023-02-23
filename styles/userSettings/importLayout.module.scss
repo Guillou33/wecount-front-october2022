@@ -1,0 +1,131 @@
+@import "../resources/mixins/";
+
+.importLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .header {
+    border-bottom: 1px solid $color-primary-2;
+    margin-bottom: 20px;
+  }
+  
+  .headerContent {
+    max-width: 75vw;
+    margin: auto;
+    padding: 60px 30px 30px 30px;
+  }
+  
+  .title {
+    color: $color-primary-5;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .footer {
+    border-top: 1px solid $color-primary-2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    background-color: white;
+  }
+    .footerContent{
+      display: flex;
+      justify-content: space-between;
+        max-width: 75vw;
+        bottom: 0;
+        margin: auto;
+        padding: 60px 30px 30px 30px;
+        .exit {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $color-primary-3;
+          text-decoration: underline;
+          text-underline-offset: 1px;
+          font-weight: 400;
+          padding: 0 25px;
+          border: none;
+          outline: none;
+          background-color: transparent;
+      
+          transition: color 0.2s ease;
+      
+          &:hover {
+            color: $color-primary-5;
+          }
+        }
+    }
+}
+
+.stepContainer{
+  max-width: 90vw;
+  // height: 10vh;
+  margin: auto;
+  padding: 60px 30px 30px 30px;
+  padding-bottom: 30vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: $color-primary-5;
+  .downloadXlsx{
+    color: $color-core;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .importedSites{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    @include lightShadow();
+    thead{
+        background-color: white;
+        th{
+            border-bottom: solid 1px $color-primary-5;
+        }
+    }
+  }
+}
+
+.content {
+  max-width: 90vw;
+  margin: auto;
+  text-align: center;
+  margin-top: 60px;
+  color: $color-primary-5;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+.fileInput {
+  width: 100%;
+  max-width: 580px;
+  margin: auto;
+  margin-top: 22px;
+}
+.error {
+  color: $color-red;
+}
+.inputError{
+  border: solid 1px $color-red;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.existingSite{
+  background-color: $color-primary-2;
+  font-style: italic;
+}
+.parentSiteSearch{
+  margin: 10px 0;
+  margin-left: 10px;
+  width: 96%;
+
+}

@@ -1,0 +1,19 @@
+@import '../resources/mixins';
+
+.main {
+  background-color: $color-primary-1;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    margin-top: -300px;
+    color: $color-primary-5;
+    text-align: center;
+    .mainText {
+      font-size: 20px;
+    }
+  }
+}

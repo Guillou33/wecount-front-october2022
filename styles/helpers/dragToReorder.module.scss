@@ -1,0 +1,17 @@
+.dragToReorder {
+  list-style: none;
+  padding: 0;
+
+  .reorderableItem {
+    padding: 0;
+
+    .itemContainer {
+      position: relative;
+      z-index: 0;
+
+      &.dragging {
+        z-index: 10;
+      }
+    }
+  }
+}

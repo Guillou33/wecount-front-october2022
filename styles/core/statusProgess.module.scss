@@ -1,0 +1,118 @@
+@import "../resources/mixins";
+
+.tooltip {
+  .line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .percent {
+    margin-left: 15px;
+  }
+}
+
+.statusProgress {
+  display: flex;
+  flex-direction: row;
+
+  .progressInfo {
+    margin-bottom: 5px;
+    color: $color-primary-3;
+    font-weight: bold;
+    display: flex;
+    font-size: 12px;
+  }
+  .entries {
+    color: $color-primary-2;
+    font-weight: normal;
+    margin-left: 5px;
+    margin-top: -5px;
+  }
+
+  .percentIndicator {
+    font-size: 12px;
+    color: $color-primary-3;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: " ";
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      background-color: darkgray;
+      margin: 0 2px 2px 0;
+    }
+
+    &.validated {
+      margin-left: auto;
+      margin-right: 8px;
+      &::before {
+        background-color: $color-status-terminated;
+      }
+    }
+
+    &.toValidate {
+      margin-right: 8px;
+      &::before {
+        background-color: $color-status-to-validate;
+      }
+    }
+
+    &.inProgress {
+      margin-right: 8px;
+      &::before {
+        background-color: $color-status-in-progress;
+      }
+    }
+
+    &.newActivity {
+      // margin-right: 15px;
+      &::before {
+        background-color: $color-dark-1;
+      }
+    }
+  }
+  .progressBarContainer {
+    display: flex;
+    z-index: 0;
+    background-color: $color-dark-1;
+    border-radius: 7px;
+    height: 14px;
+    overflow: hidden;
+    position: relative;
+    width: 310px;
+
+    .progressBar {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      position: absolute;
+      z-index: 0;
+
+      &.validated {
+        background-color: $color-status-terminated;
+        z-index: 4;
+      }
+      &.toValidate {
+        background-color: $color-status-to-validate;
+        // position: relative;
+        z-index: 3;
+      }
+      &.inProgress {
+        background-color: $color-status-in-progress;
+        // position: relative;
+        z-index: 2;
+      }
+
+      &.newActivity {
+        background-color: $color-dark-1;
+        // position: relative;
+        z-index: 1;
+      }
+    }
+  }
+}

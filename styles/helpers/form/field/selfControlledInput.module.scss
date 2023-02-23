@@ -1,0 +1,12 @@
+.main {
+  position: relative;
+  .rightIconContaainer {
+    position: absolute;
+    right: 10px;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

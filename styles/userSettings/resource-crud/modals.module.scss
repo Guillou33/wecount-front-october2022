@@ -1,0 +1,61 @@
+@import "../../resources/mixins";
+
+.buttonCreateContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.buttonUpdateContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.modalLabel {
+  font-weight: 500;
+  color: $color-primary-5;
+}
+
+.modalIndication {
+  margin-top: 5px;
+  color: $color-primary-5;
+  font-style: italic;
+}
+
+.modalExplanation {
+  color: $color-primary-5;
+}
+
+.warningManagerRoleEdition {
+  max-width: 460px;
+  margin-bottom: 8px;
+  border-radius: 0;
+
+  .icon {
+    margin-right: 5px;
+  }
+}
+
+.explanationLink {
+  color: $color-primary-5;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary-5;
+  }
+}
+.chkCreateSite{
+  label{
+    color: $color-primary-5;
+    font-weight: 500;
+  }
+}
+
+.parentSiteSelector{
+  .parentSiteSearch{
+    margin: 10px 0;
+    margin-left: 10px;
+    width: 96%;
+
+  }
+}

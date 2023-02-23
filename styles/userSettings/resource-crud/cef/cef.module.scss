@@ -1,0 +1,35 @@
+@import "../../../resources/mixins";
+
+.main {
+  margin-top: 25px;
+  .linkSeeArchivedContainer {
+    margin-bottom: 10px;
+    .linkSeeArchived {
+      color: $color-primary-3;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  .line {
+    td {
+      &.truncate {
+        max-width: 250px;
+        p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: 0;
+        }
+      }
+    }
+    .actionButtons {
+      display: flex;
+      justify-content: center;
+      i {
+        color: $color-primary-3;
+        cursor: pointer;
+        margin-left: 8px;
+      }
+    }
+  }
+}

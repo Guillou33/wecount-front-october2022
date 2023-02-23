@@ -1,0 +1,9 @@
+@import "../../../../../resources/mixins/";
+
+.applyButton {
+  background-color: $color-red;
+
+  &:hover {
+    background-color: darken($color-red, 5);
+  }
+}

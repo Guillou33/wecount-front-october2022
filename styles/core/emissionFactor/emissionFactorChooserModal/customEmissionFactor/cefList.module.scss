@@ -1,0 +1,17 @@
+@import "../../../../resources/mixins";
+
+.main {
+  padding: 0 10px;
+  .btnAddContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  .emptyContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 100px;
+  }
+}

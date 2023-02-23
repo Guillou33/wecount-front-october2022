@@ -1,0 +1,3 @@
+export enum CampaignListingColumnTypes {
+  SET_CAMPAIGN_LISTING_PREFERENCES = "SET_CAMPAIGN_LISTING_PREFERENCES",
+}

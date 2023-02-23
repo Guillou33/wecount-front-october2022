@@ -1,0 +1,23 @@
+@import "../../../../../resources/mixins/";
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+
+  .exit {
+    color: $color-primary-3;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+    font-weight: 400;
+    margin-left: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary-5;
+    }
+  }
+}

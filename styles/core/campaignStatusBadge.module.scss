@@ -1,0 +1,28 @@
+@import '../resources/mixins';
+
+.main {
+  padding: 2px 8px;
+  border-radius: 5px;
+  display: inline-block;
+  p {
+    margin: 0;
+    white-space: nowrap;
+    color: $color-dark-2;
+    font-weight: 300;
+  }
+  &.archived {
+    background-color: $color-dark-1;
+    p {
+      color: white;
+    }
+  }
+  &.in_progress {
+    background-color: $color-pastel-green;
+  }
+  &.closed {
+    background-color: $color-pastel-blue;
+  }
+  &.in_preparation {
+    background-color: $color-pastel-yellow;
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../../resources/mixins";
+
+.dropdown {
+  position: relative;
+  color: $color-primary-3;
+}
+
+.itemContainer {
+  background-color: white;
+
+  border-radius: 4px;
+  text-align: left;
+  padding: 8px 0;
+  position: absolute;
+  top: calc(100% + 12px);
+  box-shadow: 0 2px 10px 0 #d9dce8;
+  z-index: 15;
+  width: max-content;
+  min-width: 100%;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  &.center {
+    left: 50%;
+  }
+}
+
+.toggler {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  display: flex;
+  align-items: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-primary-2;
+    cursor: default;
+  }
+}
+
+.item {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 7px 12px;
+  font-weight: 300;
+  display: block;
+  border: none;
+  outline: none;
+  color: inherit;
+
+  &.disabled {
+    color: $color-primary-2;
+    font-style: italic;
+    cursor: not-allowed;
+  }
+
+  &.selected {
+    background-color: $color-primary-1;
+    color: $color-primary-4;
+  }
+
+  &:hover:not(.disabled):not(.selected) {
+    background-color: lighten($color-primary-1, 2%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  transition: background-color 0.2s;
+}
